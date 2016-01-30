@@ -52,6 +52,7 @@
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
     <Compile Include="Configurations\EventConfiguration.cs" />
     <Compile Include="EIContext.cs" />
+    <Compile Include="Extensions\UserExtensions.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\Disposable.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
