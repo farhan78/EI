@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EI.Web.MessageHandlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -10,6 +11,7 @@ namespace EI.Web
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.MessageHandlers.Add(new EIAuthHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

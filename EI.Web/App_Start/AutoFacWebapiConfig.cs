@@ -5,6 +5,7 @@ using EI.Data;
 using EI.Data.Infrastructure;
 using EI.Data.Repositories;
 using EI.Services;
+using EI.Services.Abstract;
 using EI.Web.Infrastructure.Core;
 using System;
 using System.Collections.Generic;

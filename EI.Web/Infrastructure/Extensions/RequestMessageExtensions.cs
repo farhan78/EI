@@ -1,4 +1,6 @@
-﻿using EI.Services.Abstract;
+﻿using EI.Data.Repositories;
+using EI.Entities;
+using EI.Services.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,11 @@ namespace EI.Web.Infrastructure.Extensions
         internal static IMembershipService GetMembershipService(this HttpRequestMessage request)
         {
             return request.GetService<IMembershipService>();
+        }
+
+        internal static IEntityBaseRepository<T> GetDataRepository<T>(this HttpRequestMessage request) where T : class, IEntityBase, new()
+        {
+            return request.GetService<IEntityBaseRepository<T>>();
         }
 
         private static TService GetService<TService>(this HttpRequestMessage request)

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using EI.Data.Extensions;
 using EI.Services.Abstract;
 
-namespace HomeCinema.Services
+namespace EI.Services
 {
     public class MembershipService : IMembershipService
     {
