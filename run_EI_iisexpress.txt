@@ -1,0 +1,3 @@
+
+cd \Program Files (x86)\IIS Express
+iisexpress /config:C:\Dev\Websites\EI\.vs\config\applicationhost.config /site:EI.Web-Site
