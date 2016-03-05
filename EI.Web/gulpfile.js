@@ -45,16 +45,16 @@ gulp.task('vendors-task', function () {
 gulp.task('spa-task', function () {
     var target = gulp.src('./views/home/index.cshtml');
 
-    var appDomainStream = gulp.src(['./app/domain/*.js']);
-    var appStream = gulp.src(['./app/*.js', './app/posts/*.js', './app/common/services/*.js']);
+    //var appDomainStream = gulp.src(['./app/domain/*.js']);
+    var appStream = gulp.src(['./scripts/spa/modules/*.js', './scripts/spa/services/*.js', './scripts/spa/*.js']);
 
     return target
-                .pipe(inject(appDomainStream
+               /* .pipe(inject(appDomainStream
                         .pipe(print())
                         .pipe(concat('domain.js'))
                         .pipe(uglify())
                         .pipe(gulp.dest('.build/spa')), { name: 'domain' }))
-                        .pipe(gulp.dest('./views/home/'))
+                        .pipe(gulp.dest('./views/home/'))*/
                 .pipe(inject(appStream
                         .pipe(print())
                         .pipe(concat('app.js'))
