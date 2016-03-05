@@ -175,6 +175,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".bowerrc" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\blank.gif" />
@@ -199,7 +200,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include=".bowerrc" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
