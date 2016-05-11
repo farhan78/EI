@@ -23,7 +23,7 @@ namespace EI.Web
             Bootstrapper.Run();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalConfiguration.Configuration.EnsureInitialized();
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
