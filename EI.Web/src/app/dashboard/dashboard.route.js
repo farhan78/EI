@@ -13,20 +13,20 @@
 
   function getStates() {
     return [
-      {
-        state: 'dashboard',
-        config: {
-          url: '/',
-          templateUrl: 'app/dashboard/dashboard.html',
-          controller: 'DashboardController',
-          controllerAs: 'vm',
-          title: 'dashboard',
-          settings: {
-            nav: 1,
-            content: '<i class="fa fa-dashboard"></i> Dashboard'
-          }
-        }
-      }
+      //{
+      //  state: 'dashboard',
+      //  config: {
+      //    url: '/',
+      //    templateUrl: 'app/dashboard/dashboard.html',
+      //    controller: 'DashboardController',
+      //    controllerAs: 'vm',
+      //    title: 'dashboard',
+      //    settings: {
+      //      nav: 1,
+      //      content: '<i class="fa fa-dashboard"></i> Dashboard'
+      //    }
+      //  }
+      //}
     ];
   }
 })();

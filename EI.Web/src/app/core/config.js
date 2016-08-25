@@ -14,7 +14,7 @@
 
   var config = {
     appErrorPrefix: '[helloworld Error] ',
-    appTitle: 'helloworld'
+    appTitle: 'exhibition islam'
   };
 
   core.value('config', config);

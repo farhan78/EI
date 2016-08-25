@@ -1,0 +1,24 @@
+{
+  "name": "angular-include-replace",
+  "description": "Angular directive to replace original ng-include directive element",
+  "main": "angular-include-replace.js",
+  "authors": [
+    "Ashraful Alam"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular-include-replace",
+    "includeReplace",
+    "include-replace"
+  ],
+  "homepage": "https://github.com/ashecret/angular-include-replace",
+  "_release": "774be4ec86",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "774be4ec86239edb093e0674785933015b68374a"
+  },
+  "_source": "https://github.com/ashecret/angular-include-replace.git",
+  "_target": "*",
+  "_originalSource": "angular-include-replace"
+}

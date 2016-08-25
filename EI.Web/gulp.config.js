@@ -22,7 +22,8 @@ module.exports = function() {
     // all javascript that we want to vet
     alljs: [
       './src/**/*.js',
-      './*.js'
+      './*.js',
+      '!./src/js/**'
     ],
     build: './build/',
     client: client,
@@ -31,7 +32,7 @@ module.exports = function() {
     html: client + '**/*.html',
     htmltemplates: clientApp + '**/*.html',
     images: client + 'images/**/*.*',
-    index: client + 'index.html',
+    index: client + 'index.cshtml',
     // app js, with no specs
     js: [
       clientApp + '**/*.module.js',

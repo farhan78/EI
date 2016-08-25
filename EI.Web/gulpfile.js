@@ -208,17 +208,18 @@ gulp.task('build', ['optimize', 'images', 'fonts'], function () {
  * and inject them into the new index.html
  * @return {Stream}
  */
-gulp.task('optimize', ['inject', 'test'], function () {
+//gulp.task('optimize', ['inject', 'test'], function () {
+gulp.task('optimize', ['inject'], function () {
     log('Optimizing the js, css, and html');
 
-    var assets = $.useref.assets({ searchPath: '' });
+    var assets = $.useref.assets({ searchPath: ' ' });
     // Filters are named for the gulp-useref path
     var cssFilter = $.filter('**/*.css');
     var jsAppFilter = $.filter('**/' + config.optimized.app);
     var jslibFilter = $.filter('**/' + config.optimized.lib);
 
     var templateCache = config.temp + config.templateCache.file;
-
+    
     return gulp
       .src(config.index)
       .pipe($.plumber())
