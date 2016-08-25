@@ -203,7 +203,9 @@
     <Content Include=".editorconfig" />
     <Content Include=".jscsrc" />
     <Content Include=".jshintrc" />
+    <Content Include="src\app\about\about.html" />
     <Content Include="src\app\about\portfolio.html" />
+    <Content Include="src\app\services\services.html" />
     <Content Include="src\app\services\graphic-design.html" />
     <Content Include="src\app\services\services.controller.js" />
     <Content Include="src\app\services\exhibition-hire.html" />
