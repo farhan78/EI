@@ -30,6 +30,10 @@
 
         $('.sf-menu').superfish();
 
+        $().UItoTop({
+            easingType: 'easeOutQuart',
+            containerClass: 'toTop fa fa-angle-up'
+        });
 
         if (angular.element('.rd-mobilemenu').length === 0) {
             RDMobilemenu_autoinit('[data-type="navbar"]');
@@ -39,6 +43,7 @@
         }
 
         $anchorScroll($('#mainDiv'));
+     
     }
 
   }

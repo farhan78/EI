@@ -2,6 +2,7 @@ module.exports = function() {
   var client = './src/';
   var server = './src/server/';
   var clientApp = client + 'app/';
+  var clientCustom = client + 'js/';
   var report = './report/';
   var root = './';
   var specRunnerFile = 'specs.html';
@@ -35,9 +36,12 @@ module.exports = function() {
     index: client + 'index.cshtml',
     // app js, with no specs
     js: [
+      clientCustom + '/*.js',
+      clientCustom + 'mailform/*.js',
       clientApp + '**/*.module.js',
       clientApp + '**/*.js',
-      '!' + clientApp + '**/*.spec.js'
+      '!' + clientApp + '**/*.spec.js',
+      '!' + clientCustom + '/tm-scripts.js'
     ],
     jsOrder: [
       '**/app.module.js',

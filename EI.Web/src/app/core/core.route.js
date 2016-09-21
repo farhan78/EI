@@ -29,6 +29,9 @@
                   templateUrl: 'app/layout/home.html',
                   controller: 'HomeController',
                   controllerAs: 'vm',
+                  settings: {
+                      external:false
+                  },
                   title: 'home'
               }
           },

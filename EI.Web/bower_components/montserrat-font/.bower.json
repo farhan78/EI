@@ -1,0 +1,34 @@
+{
+  "name": "montserrat-font",
+  "authors": [
+    "Chris Sim <chris.sim@antpolis.net>"
+  ],
+  "description": "Font for monsterrat. Created via Font Squirrel Font-face Generator.",
+  "main": "stylesheet.css",
+  "keywords": [
+    "monsterrat",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Antpolis/Montserrat-Font",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Antpolis/Montserrat-Font.git"
+  },
+  "_release": "c602c849ff",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c602c849ff86e23f462d01cfadf3d803d0832c81"
+  },
+  "_source": "https://github.com/Antpolis/Montserrat-Font.git",
+  "_target": "*",
+  "_originalSource": "montserrat-font"
+}

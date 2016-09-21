@@ -212,14 +212,14 @@ gulp.task('build', ['optimize', 'images', 'fonts'], function () {
 gulp.task('optimize', ['inject'], function () {
     log('Optimizing the js, css, and html');
 
-    var assets = $.useref.assets({ searchPath: ' ' });
+    var assets = $.useref.assets({ searchPath: '' });
     // Filters are named for the gulp-useref path
     var cssFilter = $.filter('**/*.css');
     var jsAppFilter = $.filter('**/' + config.optimized.app);
     var jslibFilter = $.filter('**/' + config.optimized.lib);
-
-    var templateCache = config.temp + config.templateCache.file;
     
+    var templateCache = config.temp + config.templateCache.file;
+    log(templateCache);
     return gulp
       .src(config.index)
       .pipe($.plumber())
@@ -227,9 +227,9 @@ gulp.task('optimize', ['inject'], function () {
       .pipe(assets) // Gather all assets from the html with useref
       // Get the css
       .pipe(cssFilter)
-      .pipe($.minifyCss())
+      .pipe($.minifyCss({processImport: false}))
       .pipe(cssFilter.restore())
-      // Get the custom javascript
+      // Get the custom app specific javascript
       .pipe(jsAppFilter)
       .pipe($.ngAnnotate({ add: true }))
       .pipe($.uglify())
