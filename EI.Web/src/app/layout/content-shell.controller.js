@@ -22,6 +22,11 @@
         activate();
 
         function activate() {
+
+            $().UItoTop({
+                easingType: 'easeOutQuart',
+                containerClass: 'toTop fa fa-angle-up'
+            });
           
         }
 

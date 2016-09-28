@@ -31,7 +31,8 @@
     "angular-bootstrap": "^1.2.5",
     "devicejs": "",
     "jquery-migrate": "1.2.1",
-    "animate.css": ""
+    "animate.css": "",
+    "ngInfiniteScroll": "1.0.0"
   },
   "resolutions": {
     "angular": "1.5.3"

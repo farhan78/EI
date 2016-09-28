@@ -205,12 +205,29 @@
     <Content Include=".jshintrc" />
     <Content Include="src\app\about\about.html" />
     <Content Include="src\app\about\portfolio.html" />
+    <Content Include="src\app\gallery\events\470\Header.jpg" />
+    <Content Include="src\app\gallery\events\471\Header.jpg" />
+    <Content Include="src\app\gallery\events\475\Header.jpg" />
+    <Content Include="src\app\gallery\events\479\Header.jpg" />
+    <Content Include="src\app\gallery\events\481\Header.jpg" />
+    <Content Include="src\app\gallery\events\483\Header.jpg" />
+    <Content Include="src\app\gallery\events.controller.js" />
+    <Content Include="src\app\gallery\gallery.dataservice.js" />
     <Content Include="src\app\gallery\gallery.controller.js" />
     <Content Include="src\app\gallery\gallery.html" />
     <Content Include="src\app\gallery\gallery.module.js" />
     <Content Include="src\app\gallery\gallery.route.js" />
     <Content Include="src\app\gallery\events.html" />
+    <Content Include="src\app\gallery\index.html" />
+    <Content Include="src\app\gallery\jbcore\classic\fonts\juicebox.svg" />
+    <Content Include="src\app\gallery\jbcore\classic\img\jb001.png" />
+    <Content Include="src\app\gallery\jbcore\classic\img\spinner.gif" />
+    <Content Include="src\app\gallery\jbcore\classic\theme.css" />
+    <Content Include="src\app\gallery\jbcore\full.html" />
+    <Content Include="src\app\gallery\jbcore\juicebox.js" />
+    <Content Include="src\app\gallery\posters.controller.js" />
     <Content Include="src\app\gallery\posters.html" />
+    <Content Include="src\app\gallery\posters\10\Header.jpg" />
     <Content Include="src\app\services\services.html" />
     <Content Include="src\app\services\graphic-design.html" />
     <Content Include="src\app\services\services.controller.js" />
@@ -270,6 +287,23 @@
     <Content Include="src\images\logos\Kings Hospital logo.png" />
     <Content Include="src\images\logos\KPMG logo.png" />
     <Content Include="src\images\logos\logo1.jpg" />
+    <Content Include="src\images\logos\logo10.jpg" />
+    <Content Include="src\images\logos\logo11.jpg" />
+    <Content Include="src\images\logos\logo12.jpg" />
+    <Content Include="src\images\logos\logo13.jpg" />
+    <Content Include="src\images\logos\logo14.jpg" />
+    <Content Include="src\images\logos\logo15.jpg" />
+    <Content Include="src\images\logos\logo16.jpg" />
+    <Content Include="src\images\logos\logo17.jpg" />
+    <Content Include="src\images\logos\logo18.jpg" />
+    <Content Include="src\images\logos\logo2.jpg" />
+    <Content Include="src\images\logos\logo3.jpg" />
+    <Content Include="src\images\logos\logo4.jpg" />
+    <Content Include="src\images\logos\logo5.jpg" />
+    <Content Include="src\images\logos\logo6.jpg" />
+    <Content Include="src\images\logos\logo7.jpg" />
+    <Content Include="src\images\logos\logo8.jpg" />
+    <Content Include="src\images\logos\logo9.jpg" />
     <Content Include="src\images\logos\Mercy Prophet Logo.jpg" />
     <Content Include="src\images\logos\Minsitry of Arts South Africa.png" />
     <Content Include="src\images\logos\Muslim world league logo.jpg" />
@@ -293,6 +327,7 @@
     <Content Include="src\images\page-1_img12_original.jpg" />
     <Content Include="src\images\page-1_img13.jpg" />
     <Content Include="src\images\page-1_img13_original.jpg" />
+    <Content Include="src\images\page-3_img01.jpg" />
     <Content Include="src\js\camera.js" />
     <Content Include="src\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="src\js\jquery.cookie.js" />
@@ -331,6 +366,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -346,7 +382,9 @@
     <Compile Include="Infrastructure\Mappings\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Infrastructure\MessageHandlers\EIAuthHandler.cs" />
     <Compile Include="Infrastructure\Validators\EventViewModelValidator.cs" />
+    <Compile Include="Infrastructure\Validators\PosterViewModelValidator.cs" />
     <Compile Include="Models\EventViewModel.cs" />
+    <Compile Include="Models\PosterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -369,6 +407,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="src\app\gallery\jbcore\classic\fonts\juicebox.eot" />
+    <Content Include="src\app\gallery\jbcore\classic\fonts\juicebox.ttf" />
+    <Content Include="src\app\gallery\jbcore\classic\fonts\juicebox.woff" />
     <None Include="src\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

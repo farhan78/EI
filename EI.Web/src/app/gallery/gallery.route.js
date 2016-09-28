@@ -18,7 +18,7 @@
                      config: {
                          url: '/gallery',
                          templateUrl: 'app/gallery/gallery.html',
-                         controller: 'GalleryController',
+                         //controller: 'GalleryController',
                          controllerAs: 'vm',
                      }
                  },
@@ -27,16 +27,25 @@
                      config: {
                          url: '/events',
                          templateUrl: 'app/gallery/events.html',
-                         controller: 'GalleryController',
-                         controllerAs: 'vm',
+                         controller: 'EventsController',
+                         controllerAs: 'vm'
                      }
                  },
+                 //{
+                 //    state: 'content.gallery.events.gallery-viewer',
+                 //    config: {
+                 //        url: '/gallery-viewer',
+                 //        templateUrl: 'app/gallery/index.html',
+                 //        controller: 'EventsController',
+                 //        controllerAs: 'vm'
+                 //    }
+                 //},
                  {
                      state: 'content.gallery.posters',
                      config: {
                          url: '/posters',
                          templateUrl: 'app/gallery/posters.html',
-                         controller: 'GalleryController',
+                         controller: 'PostersController',
                          controllerAs: 'vm',
                      }
                  }

@@ -18,6 +18,7 @@ namespace EI.Web.Infrastructure.Mappings
         protected override void Configure()
         {
             Mapper.CreateMap<Event, EventViewModel>();
+            Mapper.CreateMap<Poster, PosterViewModel>();
         }
     }
 }

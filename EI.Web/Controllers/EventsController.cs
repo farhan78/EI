@@ -29,14 +29,23 @@ namespace EI.Web.Controllers
 
         [AllowAnonymous]
         [Route("latest")]
-        public HttpResponseMessage Get(HttpRequestMessage request)
+        public HttpResponseMessage Get(HttpRequestMessage request, int after)
         {
+            List<Event> events;
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                var events = _eventsRepository.GetAll();// OrderByDescending(m => m.ReleaseDate).Take(6).ToList();
 
-                    IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
+                if (after != 0)
+                {
+                    events = _eventsRepository.FindBy(e => e.HasAlbum && e.ID < after).OrderByDescending(m => m.ID).Take(9).ToList();
+                }
+                else
+                {
+                    events = _eventsRepository.FindBy(e => e.HasAlbum).OrderByDescending(m => m.ID).Take(9).ToList();
+                }
+
+                IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
 
                 response = request.CreateResponse<IEnumerable<EventViewModel>>(HttpStatusCode.OK, eventsVM);
 

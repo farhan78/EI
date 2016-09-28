@@ -13,15 +13,6 @@
 
     function getStates() {
         return [
-          //{
-          //    state: 'content.about',
-          //    config: {
-          //        url: '/what-we-do',
-          //        templateUrl: 'app/about/what-we-do.html',
-          //        controller: 'AboutController',
-          //        controllerAs: 'vm',
-          //    }
-          //},
                  {
                      state: 'content.about',
                      config: {
@@ -49,15 +40,6 @@
                          controllerAs: 'vm',
                      }
                  }
-           //{
-           //    state: 'content.portfolio',
-           //    config: {
-           //        url: '/portfolio',
-           //        templateUrl: 'app/about/portfolio.html',
-           //        controller: 'AboutController',
-           //        controllerAs: 'vm',
-           //    }
-           //}
         ];
     }
 })();

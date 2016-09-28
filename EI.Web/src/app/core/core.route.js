@@ -44,6 +44,16 @@
                    controllerAs: 'vm',
                    title: 'content'
                }
+          },
+          {
+               state: 'gallery-viewer',
+               config: {
+                   url: '/gallery-viewer/:galleryType/:id',
+                   templateUrl: 'app/gallery/index.html',
+                   controller: 'GalleryController',
+                   controllerAs: 'vm',
+                   title: 'gallery'
+               }
            },
         ];
     }

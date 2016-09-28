@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	cropToFit="false"
+	galleryTitle="test"
+	backgroundColor="rgba(0,0,0,1)"
+	useThumbDots="false"
+	showThumbsButton="true"
+
+>
+  <image imageURL="images/Header - Copy (2).jpg"
+	thumbURL="thumbs/Header - Copy (2).jpg"
+	linkURL="images/Header - Copy (2).jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\New folder\Header - Copy (2).jpg">
+    <title><![CDATA[Header - Copy (2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/Header - Copy (3).jpg"
+	thumbURL="thumbs/Header - Copy (3).jpg"
+	linkURL="images/Header - Copy (3).jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\New folder\Header - Copy (3).jpg">
+    <title><![CDATA[Header - Copy (3)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/Header - Copy.jpg"
+	thumbURL="thumbs/Header - Copy.jpg"
+	linkURL="images/Header - Copy.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\New folder\Header - Copy.jpg">
+    <title><![CDATA[Header - Copy]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/Header.jpg"
+	thumbURL="thumbs/Header.jpg"
+	linkURL="images/Header.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\New folder\Header.jpg">
+    <title><![CDATA[Header]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</juiceboxgallery>
