@@ -5,9 +5,11 @@
       .module('app.gallery')
       .controller('EventsController', EventsController);
 
-    EventsController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger', '$stateParams', 'galleryDataService', '$anchorScroll'];
+    EventsController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger',
+        '$stateParams', 'galleryDataService', '$anchorScroll'];
     /* @ngInject */
-    function EventsController($rootScope, $q, $timeout, config, logger, $stateParams, galleryDataService, $anchorScroll) {
+    function EventsController($rootScope, $q, $timeout, config, logger,
+        $stateParams, galleryDataService, $anchorScroll) {
 
         var vm = this;
         vm.events = [];
@@ -35,9 +37,10 @@
 
         function getEvents() {
           
-            if (vm.done) return;
+            if (vm.done || vm.busy) {
+                return;
+            }
 
-            if (vm.busy) return;
             vm.busy = true;
             return galleryDataService.getEvents(vm.after)
                 .then(function (data) {
@@ -56,7 +59,7 @@
 
                         vm.events.push(item);
                     });
-
+                
                     vm.busy = false;
                     return;
                 });

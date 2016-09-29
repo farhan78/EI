@@ -31,15 +31,6 @@
                          controllerAs: 'vm'
                      }
                  },
-                 //{
-                 //    state: 'content.gallery.events.gallery-viewer',
-                 //    config: {
-                 //        url: '/gallery-viewer',
-                 //        templateUrl: 'app/gallery/index.html',
-                 //        controller: 'EventsController',
-                 //        controllerAs: 'vm'
-                 //    }
-                 //},
                  {
                      state: 'content.gallery.posters',
                      config: {

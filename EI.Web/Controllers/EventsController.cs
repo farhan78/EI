@@ -28,7 +28,7 @@ namespace EI.Web.Controllers
         }
 
         [AllowAnonymous]
-        [Route("latest")]
+        [Route("gallery")]
         public HttpResponseMessage Get(HttpRequestMessage request, int after)
         {
             List<Event> events;
@@ -44,6 +44,25 @@ namespace EI.Web.Controllers
                 {
                     events = _eventsRepository.FindBy(e => e.HasAlbum).OrderByDescending(m => m.ID).Take(9).ToList();
                 }
+
+                IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
+
+                response = request.CreateResponse<IEnumerable<EventViewModel>>(HttpStatusCode.OK, eventsVM);
+
+                return response;
+            });
+        }
+
+        [AllowAnonymous]
+        [Route("list")]
+        public HttpResponseMessage Get(HttpRequestMessage request)
+        {
+            List<Event> events;
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+
+                events = _eventsRepository.GetAll().OrderByDescending(m => m.ID).ToList();
 
                 IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
 

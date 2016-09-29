@@ -5,9 +5,11 @@
       .module('app.gallery')
       .controller('GalleryController', GalleryController);
 
-    GalleryController.$inject = ['$rootScope','$q', '$timeout', 'config', 'logger', '$stateParams','galleryDataService', '$anchorScroll'];
+    GalleryController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger',
+        '$stateParams', 'galleryDataService', '$anchorScroll'];
     /* @ngInject */
-    function GalleryController($rootScope, $q, $timeout, config, logger, $stateParams, galleryDataService, $anchorScroll) {
+    function GalleryController($rootScope, $q, $timeout, config, logger,
+        $stateParams, galleryDataService, $anchorScroll) {
 
         var vm = this;
         vm.events = null;
@@ -19,7 +21,7 @@
             vm.params = $stateParams;
          
             new juicebox({
-                baseUrl: 'app/gallery/'+vm.params.galleryType + '/'  + vm.params.id + '/',
+                baseUrl: 'gallery/'+vm.params.galleryType + '/'  + vm.params.id + '/',
                 containerId: 'juicebox-container',
                 galleryWidth: '100%',
                 galleryHeight: '100%',

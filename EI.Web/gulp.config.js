@@ -33,6 +33,9 @@ module.exports = function() {
     html: client + '**/*.html',
     htmltemplates: clientApp + '**/*.html',
     images: client + 'images/**/*.*',
+    gallery: [
+        client + 'gallery/**'
+    ],
     index: client + 'index.cshtml',
     // app js, with no specs
     js: [
@@ -40,6 +43,8 @@ module.exports = function() {
       clientCustom + 'mailform/*.js',
       clientApp + '**/*.module.js',
       clientApp + '**/*.js',
+      '!' + client + 'gallery/jbcore/juicebox.js',
+   //   '!' + clientApp + 'gallery/jbcore/*.*',
       '!' + clientApp + '**/*.spec.js',
       '!' + clientCustom + '/tm-scripts.js'
     ],

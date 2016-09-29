@@ -39,6 +39,15 @@
                          controller: 'AboutController',
                          controllerAs: 'vm',
                      }
+                 },
+                 {
+                     state: 'content.about.news',
+                     config: {
+                         url: '/news',
+                         templateUrl: 'app/about/news.html',
+                         controller: 'NewsController',
+                         controllerAs: 'vm',
+                     }
                  }
         ];
     }

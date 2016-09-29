@@ -5,9 +5,11 @@
       .module('app.gallery')
       .controller('PostersController', PostersController);
 
-    PostersController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger', '$stateParams', 'galleryDataService', '$anchorScroll'];
+    PostersController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger',
+        '$stateParams', 'galleryDataService', '$anchorScroll'];
     /* @ngInject */
-    function PostersController($rootScope, $q, $timeout, config, logger, $stateParams, galleryDataService, $anchorScroll) {
+    function PostersController($rootScope, $q, $timeout, config, logger,
+        $stateParams, galleryDataService, $anchorScroll) {
 
         var vm = this;
         vm.posters = [];
@@ -34,9 +36,10 @@
 
         function getPosters() {
 
-            if (vm.done) return;
+            if (vm.done || vm.busy) {
+                return;
+            }
 
-            if (vm.busy) return;
             vm.busy = true;
             return galleryDataService.getPosters(vm.after)
                 .then(function (data) {

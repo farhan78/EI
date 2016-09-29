@@ -28,7 +28,7 @@
          
             return $http({
                     url: '../api/events/',
-                    method: "GET",
+                    method: 'GET',
                     params: { after: after }
                 })
                 .then(success)
@@ -51,7 +51,7 @@
 
             return $http({
                 url: '../api/posters/',
-                method: "GET",
+                method: 'GET',
                 params: { after: after }
             })
                 .then(success)

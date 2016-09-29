@@ -7423,7 +7423,7 @@ a.list-group-item-danger.active:focus {
 }
 .well13 {
   padding-bottom: 54px;
-  padding-top: 64px;
+  padding-top: 32px;
 }
 .well14 {
   padding-bottom: 33px;
@@ -8186,4 +8186,20 @@ button.close {
 .fadeIn.ng-enter-active {
     /* end with opacity 1 (fade in) */
     opacity: 1;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.container h4 {
+    font-size:35px;
+}
+
+.container h5 {
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:50px;
+    line-height:1;
 }
