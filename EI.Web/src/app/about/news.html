@@ -1,29 +1,31 @@
 ﻿
-<section class="well13 center767">
+<section class="well13">
     <div class="container">
-        <h4 id="news">
+        <h4 id="news" class="main-header">
             News
         </h4>
-        <h5>
+        <h5 class="sub-header">
             Secondary text here
+            <hr />
         </h5>
-
-        <div ng-repeat="news in vm.news" class="col-xs-12" style="background-color:white;margin-bottom:40px">
+       
+        <div ng-repeat="news in vm.news" class="col-xs-12 list-div">
             <div>
                 <div class="row box-shadow">
-                    <div class="col-xs-2" style="padding-left:0px;">
+                    <div class="col-xs-2 list-image" style="padding-left:0px;">
                         <img class="img-responsive" src="images/news/3_30072009836.JPG">
                     </div>
-                    <div class="col-xs-10" style="padding:20px 0 20px 15px">
-                        <div class="caption">
-                            <h6 style="font-size:20px">{{news.Title}}</h6>
-                            <p style="margin:0px;font-size:15px">{{news.NewsDate | date:'dd MMMM yyyy'}}</p>
-                            <p style="margin-top:10px">{{news.Description}}</p>
+                    <div class="col-xs-10">
+                        <div class="list-item">
+                            <p class="list-title">{{news.Title}}</p>
+                            <p class="list-date">{{news.NewsDate | date:'dd MMMM yyyy'}}</p>
+                            <p class="list-desc">{{news.Description}}</p>
                         </div>
 
                     </div>
                 </div>
             </div>
+            <hr class="list-separator">
         </div>
     </div>
 </section>
