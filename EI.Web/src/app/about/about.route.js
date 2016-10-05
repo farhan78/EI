@@ -48,6 +48,15 @@
                          controller: 'NewsController',
                          controllerAs: 'vm',
                      }
+                 },
+                 {
+                     state: 'content.about.reports',
+                     config: {
+                         url: '/reports',
+                         templateUrl: 'app/about/reports.html',
+                         controller: 'ReportsController',
+                         controllerAs: 'vm',
+                     }
                  }
         ];
     }

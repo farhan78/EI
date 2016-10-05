@@ -20,6 +20,7 @@ namespace EI.Web.Infrastructure.Mappings
             Mapper.CreateMap<Event, EventViewModel>();
             Mapper.CreateMap<Poster, PosterViewModel>();
             Mapper.CreateMap<News, NewsViewModel>();
+            Mapper.CreateMap<Report, ReportViewModel>();
         }
     }
 }

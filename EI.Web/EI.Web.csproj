@@ -301,6 +301,8 @@
     <Content Include="src\app\about\news.controller.js" />
     <Content Include="src\app\about\news.html" />
     <Content Include="src\app\about\portfolio.html" />
+    <Content Include="src\app\about\reports.controller.js" />
+    <Content Include="src\app\about\reports.html" />
     <Content Include="src\app\gallery\events.controller.js" />
     <Content Include="src\app\gallery\gallery.dataservice.js" />
     <Content Include="src\app\gallery\gallery.controller.js" />
@@ -352,6 +354,8 @@
     <Content Include="src\app\layout\home.controller.spec.js" />
     <Content Include="src\app\layout\home.html" />
     <Content Include="src\app\widgets\widgets.module.js" />
+    <Content Include="src\fonts\fontawesome-webfont.svg" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="src\gallery\events\470\Header.jpg" />
     <Content Include="src\gallery\events\471\Header.jpg" />
     <Content Include="src\gallery\events\475\Header.jpg" />
@@ -374,6 +378,7 @@
     <Content Include="src\gallery\jbcore\full.html" />
     <Content Include="src\gallery\jbcore\juicebox.js" />
     <Content Include="src\gallery\posters\10\Header.jpg" />
+    <Content Include="src\images\about.jpg" />
     <Content Include="src\images\AngularJS-small.png" />
     <Content Include="src\images\busy.gif" />
     <Content Include="src\images\gulp-tiny.png" />
@@ -409,13 +414,7 @@
     <Content Include="src\images\page-1_img09.jpg" />
     <Content Include="src\images\page-1_img10.jpg" />
     <Content Include="src\images\page-1_img10_original.jpg" />
-    <Content Include="src\images\page-1_img11.jpg" />
-    <Content Include="src\images\page-1_img11_original.jpg" />
-    <Content Include="src\images\page-1_img12.jpg" />
-    <Content Include="src\images\page-1_img12_original.jpg" />
-    <Content Include="src\images\page-1_img13.jpg" />
-    <Content Include="src\images\page-1_img13_original.jpg" />
-    <Content Include="src\images\page-3_img01.jpg" />
+    <Content Include="src\images\services.jpg" />
     <Content Include="src\js\camera.js" />
     <Content Include="src\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="src\js\jquery.cookie.js" />
@@ -456,6 +455,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PostersController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -473,9 +473,11 @@
     <Compile Include="Infrastructure\Validators\EventViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\NewsViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\PosterViewModelValidator.cs" />
+    <Compile Include="Infrastructure\Validators\ReportViewModelValidator.cs" />
     <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\NewsViewModel.cs" />
     <Compile Include="Models\PosterViewModel.cs" />
+    <Compile Include="Models\ReportViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -512,6 +514,15 @@
     <Content Include="build\images\Frontpage Main banner.pdf" />
     <Content Include="build\index.cshtml" />
     <None Include="Properties\PublishProfiles\EI.pubxml" />
+    <Content Include="src\fonts\fontawesome-webfont.eot" />
+    <Content Include="src\fonts\fontawesome-webfont.ttf" />
+    <Content Include="src\fonts\fontawesome-webfont.woff" />
+    <Content Include="src\fonts\fontawesome-webfont.woff2" />
+    <Content Include="src\fonts\FontAwesome.otf" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="src\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -523,6 +534,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="src\css\" />
+    <Folder Include="src\images\reports\" />
+    <Folder Include="src\resources\reports\" />
     <Folder Include="Views\Events\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

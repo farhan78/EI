@@ -19,6 +19,7 @@ namespace EI.Web.Infrastructure.Core
         protected IEntityBaseRepository<Event> _eventsRepository;
         protected IEntityBaseRepository<Poster> _postersRepository;
         protected IEntityBaseRepository<News> _newsRepository;
+        protected IEntityBaseRepository<Report> _reportsRepository;
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
         protected IEntityBaseRepository<Error> _errorsRepository;
         protected IUnitOfWork _unitOfWork;
@@ -72,6 +73,11 @@ namespace EI.Web.Infrastructure.Core
             if (entities.Any(e => e.FullName == typeof(News).FullName))
             {
                 _newsRepository = _dataRepositoryFactory.GetDataRepository<News>(RequestMessage);
+            }
+
+            if (entities.Any(e => e.FullName == typeof(Report).FullName))
+            {
+                _reportsRepository = _dataRepositoryFactory.GetDataRepository<Report>(RequestMessage);
             }
         }
 

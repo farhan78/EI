@@ -1,0 +1,32 @@
+﻿
+<section class="well13">
+    <div class="container">
+        <h4 id="reports" class="main-header">
+            Reports
+        </h4>
+        <h5 class="sub-header">
+            Secondary text here
+            <hr />
+        </h5>
+        <div ng-repeat="report in vm.reports" class="col-xs-12 list-div">
+            <div>
+                <div class="row box-shadow">
+                    <div class="col-xs-1 list-image" style="padding-left:0px;">
+                        <img class="img-responsive" src="images/reports/1_r1.jpg">
+                    </div>
+                    <div class="col-xs-11">
+                        <div class="list-item">
+                            <p class="list-title">{{report.Name}}</p>
+                            <p class="list-date">{{report.DateSubmitted | date:'dd MMMM yyyy'}}</p>
+                            <p class="list-desc">{{report.Description}}</p>
+                            <button type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-download-alt"></span>
+                            Small button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="list-separator">
+        </div>
+    </div>
+</section>

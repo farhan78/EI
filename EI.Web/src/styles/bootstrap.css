@@ -3441,6 +3441,7 @@ mark,
 
 .bg-image-1 {
     background-image: url(../images/page-1_img02.jpg);
+  
 }
 
 .bg-image-2 {
@@ -9909,7 +9910,7 @@ button.close {
 .sub-header {
     font-size: 20px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     line-height: 1;
 }
 
@@ -10022,12 +10023,14 @@ button.close {
         font-size: 12px;
         line-height: 1.2;
         color:black;
+        padding-right:15px;
     }
 
     .list-desc {
         font-size: 11px;
         margin-top: 10px;
         line-height: 1.4;
+        padding-right:15px;
     }
 
 
@@ -10042,8 +10045,14 @@ button.close {
 
 }
 
+/* body text*/
 
+@media (max-width: 459px) {
 
+    .static-body {
+        font-size:12px;
+    }
+}
 /* nav bar*/
 
 #mainContentDiv header.header-1 {
@@ -10086,4 +10095,23 @@ button.close {
     footer {
         text-align: center;
     }
+}
+
+
+/* list styles*/
+
+
+section ul {
+   margin-left:20px;
+   list-style-type:disc;
+}
+
+section ul.main li{
+    list-style-type:disc;
+    padding: 0;
+}
+
+section ul.nested li{
+    list-style-type:circle;
+    padding-left: 10px;
 }
