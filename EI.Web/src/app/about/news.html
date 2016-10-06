@@ -8,8 +8,8 @@
             Secondary text here
             <hr />
         </h5>
-        <div ng-repeat="news in vm.news" class="col-xs-12 list-div">
-            <div>
+        <div data-ng-repeat="news in vm.news.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+       
                 <div class="row box-shadow">
                     <div class="col-xs-2 list-image" style="padding-left:0px;">
                         <img class="img-responsive" src="images/news/3_30072009836.JPG">
@@ -23,8 +23,12 @@
 
                     </div>
                 </div>
-            </div>
+      
             <hr class="list-separator">
         </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.news.length > vm.maxSize"
+                        total-items="vm.news.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
     </div>
 </section>

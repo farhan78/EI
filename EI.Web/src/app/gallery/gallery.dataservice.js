@@ -39,7 +39,7 @@
             }
 
             function fail(e) {
-                return exception.catcher('XHR Failed for getEvents')(e);
+                return exception.catcher('XHR Failed for getEventsGallery')(e);
             }
         }
 

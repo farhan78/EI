@@ -11,7 +11,14 @@
 
         var vm = this;
         vm.news = [];
+        vm.loading = true;
+
+        vm.maxSize = 10;
+        vm.currentPage = 1;
+        vm.totalItems = 0;
+
         vm.getNews = getNews;
+        vm.goToTop = goToTop;
 
         activate();
         function activate() {
@@ -33,9 +40,12 @@
             return aboutDataService.getNews()
                 .then(function (data) {
                     vm.news = data;
+                    vm.loading = false;
                 });
         }
 
-
+        function goToTop() {
+            $anchorScroll($('#news'));
+        }
     }
 })();

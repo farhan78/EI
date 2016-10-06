@@ -298,6 +298,8 @@
     <Content Include=".jshintrc" />
     <Content Include="src\app\about\about.dataservice.js" />
     <Content Include="src\app\about\about.html" />
+    <Content Include="src\app\about\event-list.controller.js" />
+    <Content Include="src\app\about\events.html" />
     <Content Include="src\app\about\news.controller.js" />
     <Content Include="src\app\about\news.html" />
     <Content Include="src\app\about\portfolio.html" />
@@ -524,6 +526,8 @@
     <Content Include="src\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="src\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="src\index.cshtml" />
+    <Content Include="src\resources\reports\1_General_Islam_Exhibition_-_Exhibition_Islam_Report.pdf" />
+    <Content Include="src\resources\reports\23_Annual_Report_2014-1.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -535,7 +539,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="src\css\" />
     <Folder Include="src\images\reports\" />
-    <Folder Include="src\resources\reports\" />
     <Folder Include="Views\Events\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>

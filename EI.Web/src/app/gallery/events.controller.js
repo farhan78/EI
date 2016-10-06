@@ -16,8 +16,10 @@
         vm.busy = false;
         vm.done = false;
         vm.after = 0;
-        vm.getEvents = getEvents;
+        vm.loading = true;
 
+        vm.getEvents = getEvents;
+     
         activate();
 
         function activate() {
@@ -27,7 +29,7 @@
             var params = $stateParams.params;
             vm.after = 0;
            // promises.push(getEvents());
-
+          
             return $q.all(promises)
                 .then(function () {
 
@@ -64,7 +66,5 @@
                     return;
                 });
         }
-
-
     }
 })();

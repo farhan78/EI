@@ -57,7 +57,16 @@
                          controller: 'ReportsController',
                          controllerAs: 'vm',
                      }
-                 }
+                 },
+                {
+                    state: 'content.about.events',
+                    config: {
+                        url: '/events',
+                        templateUrl: 'app/about/events.html',
+                        controller: 'EventListController',
+                        controllerAs: 'vm',
+                    }
+                }
         ];
     }
 })();

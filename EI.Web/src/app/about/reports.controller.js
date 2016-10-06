@@ -11,7 +11,14 @@
 
         var vm = this;
         vm.reports = [];
+        vm.loading = true;
+
+        vm.maxSize = 10;
+        vm.currentPage = 1;
+        vm.totalItems = 0;
+
         vm.getReports = getReports;
+        vm.goToTop = goToTop;
 
         activate();
         function activate() {
@@ -33,9 +40,12 @@
             return aboutDataService.getReports()
                 .then(function (data) {
                     vm.reports = data;
+                    vm.loading = false;
                 });
         }
 
-
+        function goToTop() {
+            $anchorScroll($('#reports'));
+        }
     }
 })();
