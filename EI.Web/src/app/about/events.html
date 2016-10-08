@@ -4,31 +4,37 @@
         <h4 id="news" class="main-header">
             Events
         </h4>
-        <h5 class="sub-header">
+        <h5 class="sub-header mid-margin-bottom">
             Secondary text here
             <hr />
         </h5>
+        <form class="form-inline mid-margin-bottom small-margin-left">
+            <div class="form-group">
+                <input type="text" class="form-control" style="width:300px" placeholder="Type to find events..." ng-model="vm.search" />
 
-        <div data-ng-repeat="event in vm.events.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+            </div>
+        </form>
+
+        <div data-ng-repeat="event in vm.filteredEvents.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
             <div class="box-shadow">
-                    <div class="list-item">
-                        <p class="list-title">{{event.Name}}</p>
-                        <p class="list-sub-title">{{event.Venue}}</p>
-                        <p class="list-date">{{event.StartDate | date:'dd MMMM yyyy'}} - {{event.EndDate | date:'dd MMMM yyyy'}}</p>
-                        <p class="list-desc">{{event.Description}}</p>
-                        <a href="{{event.ViewLink}}" ng-if="event.ViewLink !== null && event.ViewAs !== null" class="btn btn-primary btn-sm btn-responsive small-margin-top" download>
-                            <span class="glyphicon glyphicon-download-alt"></span>
-                            <span>{{event.ViewAs}}</span>
-                        </a>
-                    </div>
-                
-                
+                <div class="list-item">
+                    <p class="list-title">{{event.Name}}</p>
+                    <p class="list-sub-title">{{event.Venue}}</p>
+                    <p class="list-date">{{event.StartDateString}} - {{event.EndDateString}} | <span class="label" ng-class="{'label-default': event.EventPeriod === 'Completed','label-warning': event.EventPeriod === 'Ongoing','label-danger': event.EventPeriod === 'Forthcoming'}">{{event.EventPeriod}}</span></p>
+                    <p class="list-desc">{{event.Description}}</p>
+                    <a href="{{event.ViewLink}}" ng-if="event.ViewLink !== null && event.ViewAs !== null" class="btn btn-primary btn-sm btn-responsive small-margin-top" download>
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        <span>{{event.ViewAs}}</span>
+                    </a>
+                </div>
+
+
             </div>
             <hr class="list-separator">
         </div>
         <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
-        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.events.length > vm.maxSize"
-                        total-items="vm.events.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.filteredEvents.length > vm.maxSize"
+                        total-items="vm.filteredEvents.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
                         previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
     </div>
 </section>

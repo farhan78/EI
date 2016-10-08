@@ -66,7 +66,7 @@ namespace EI.Web.Controllers
 
                 IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
 
-                response = request.CreateResponse<IEnumerable<EventViewModel>>(HttpStatusCode.OK, eventsVM);
+                response = request.CreateResponse<IEnumerable<EventViewModel>>(HttpStatusCode.OK, eventsVM.OrderByDescending(e => e.EventPeriod));
 
                 return response;
             });

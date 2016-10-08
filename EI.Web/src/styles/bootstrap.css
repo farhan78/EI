@@ -5205,7 +5205,7 @@ output {
     color: #e2e0e0;
 }
 
-.form-control {
+/*.form-control {
     display: block;
     width: 100%;
     height: 57px;
@@ -5220,7 +5220,26 @@ output {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}*/
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+
 
     .form-control:focus {
         border-color: #66afe9;
@@ -10422,6 +10441,7 @@ button.close {
 .list-date {
     margin: 0px;
     font-size: 13px;
+    color:#A67B08;
 }
 
 .list-desc {
@@ -10519,6 +10539,8 @@ button.close {
     .list-sub-title {
          font-size: 11px;
          margin:0px;
+         margin-right:15px;
+         line-height:1.5;
     }
 
     .list-desc {
@@ -10626,15 +10648,27 @@ section ul.nested li{
     margin-top: 30px;
 }
 
-.small-margin-botton {
+.small-margin-left {
+    margin-left:10px;
+}
+
+.mid-margin-left {
+    margin-left: 20px;
+}
+
+.large-margin-left {
+    margin-left: 30px;
+}
+
+.small-margin-bottom {
     margin-bottom:10px;
 }
 
-.mid-margin-botton {
+.mid-margin-bottom {
     margin-bottom: 20px;
 }
 
-.large-margin-botton {
+.large-margin-bottom {
     margin-bottom: 30px;
 }
 

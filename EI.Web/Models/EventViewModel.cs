@@ -22,6 +22,41 @@ namespace EI.Web.Models
         public string VideoImage { get; set; }
         public string VideoDuration { get; set; }
 
+        public string StartDateString
+        {
+            get
+            {
+                return StartDate.ToString("dd MMMM yyyy");
+            }
+        }
+
+        public string EndDateString
+        {
+            get
+            {
+                return EndDate.ToString("dd MMMM yyyy");
+            }
+        }
+
+        public string EventPeriod
+        {
+            get
+            {
+                if (EndDate < DateTime.Now)
+                {
+                    return "Completed";
+                }
+                else if (EndDate >= DateTime.Now && StartDate <=DateTime.Now)
+                {
+                    return "Ongoing";
+                }
+                else
+                {
+                    return "Forthcoming";
+                }
+            }
+        }
+
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             var validator = new EventViewModelValidator();
