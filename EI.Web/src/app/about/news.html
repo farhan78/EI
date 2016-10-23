@@ -3,27 +3,26 @@
     <div class="container">
         <h4 id="news" class="main-header">
             News
-        </h4>
-        <h5 class="sub-header">
-            Secondary text here
             <hr />
-        </h5>
-        <div data-ng-repeat="news in vm.news.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
-       
-                <div class="row box-shadow">
-                    <div class="col-xs-2 list-image" style="padding-left:0px;">
-                        <img class="img-responsive" src="images/news/3_30072009836.JPG">
-                    </div>
-                    <div class="col-xs-10">
-                        <div class="list-item">
-                            <p class="list-title">{{news.Title}}</p>
-                            <p class="list-date">{{news.NewsDate | date:'dd MMMM yyyy'}}</p>
-                            <p class="list-desc">{{news.Description}}</p>
-                        </div>
+        </h4>
 
-                    </div>
-                </div>
       
+        <div data-ng-repeat="news in vm.news.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+
+            <div class="row box-shadow">
+                <div class="col-xs-2 list-image" style="padding-left:0px;">
+                    <img class="img-responsive" src="images/news/3_30072009836.JPG">
+                </div>
+                <div class="col-xs-10">
+                    <div class="list-item">
+                        <p class="list-title">{{news.Title}}</p>
+                        <p class="list-date">{{news.NewsDate | date:'dd MMMM yyyy'}}</p>
+                        <p class="list-desc">{{news.Description}}</p>
+                    </div>
+
+                </div>
+            </div>
+
             <hr class="list-separator">
         </div>
         <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>

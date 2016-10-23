@@ -13,24 +13,6 @@
 
     function getStates() {
         return [
-          //{
-          //    state: 'content.services',
-          //    config: {
-          //        url: '/exhibition-hire',
-          //        templateUrl: 'app/services/exhibition-hire.html',
-          //        controller: 'ServicesController',
-          //        controllerAs: 'vm',
-          //    }
-          //},
-          //{
-          //    state: 'content.graphic-design',
-          //    config: {
-          //        url: '/graphic-design',
-          //        templateUrl: 'app/services/graphic-design.html',
-          //        controller: 'ServicesController',
-          //        controllerAs: 'vm',
-          //    }
-          //}
            {
                state: 'content.services',
                config: {
@@ -40,24 +22,42 @@
                    controllerAs: 'vm',
                }
            },
-                 {
-                     state: 'content.services.exhibition-hire',
-                     config: {
-                         url: '/exhibition-hire',
-                         templateUrl: 'app/services/exhibition-hire.html',
-                         controller: 'ServicesController',
-                         controllerAs: 'vm',
-                     }
-                 },
-                 {
-                     state: 'content.services.graphic-design',
-                     config: {
-                         url: '/graphic-design',
-                         templateUrl: 'app/services/graphic-design.html',
-                         controller: 'ServicesController',
-                         controllerAs: 'vm',
-                     }
-                 }
+            {
+                state: 'content.services.exhibition-hire',
+                config: {
+                    url: '/exhibition-hire',
+                    templateUrl: 'app/services/exhibition-hire.html',
+                    controller: 'ServicesController',
+                    controllerAs: 'vm',
+                }
+            },
+            {
+                state: 'content.services.graphic-design',
+                config: {
+                    url: '/graphic-design',
+                    templateUrl: 'app/services/graphic-design.html',
+                    controller: 'ServicesController',
+                    controllerAs: 'vm',
+                }
+            },
+            {
+                state: 'content.services.permanent-build',
+                config: {
+                    url: '/permanent-build',
+                    templateUrl: 'app/services/permanent-build.html',
+                    controller: 'ServicesController',
+                    controllerAs: 'vm',
+                }
+            },
+            {
+                state: 'content.services.design-and-printing',
+                config: {
+                    url: '/design-and-printing',
+                    templateUrl: 'app/services/design-and-printing.html',
+                    controller: 'ServicesController',
+                    controllerAs: 'vm',
+                }
+            }
         ];
     }
 })();

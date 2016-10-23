@@ -105,6 +105,16 @@ gulp.task('gallery', [], function () {
 
 });
 
+gulp.task('resources', [], function () {
+    log('Copying all resources related files');
+
+    return gulp
+        .src(config.resources)
+        .pipe(gulp.dest(config.build + 'resources'));
+
+});
+
+
 gulp.task('less-watcher', function () {
     gulp.watch([config.less], ['styles']);
 });
@@ -199,7 +209,7 @@ gulp.task('build-specs', ['templatecache'], function (done) {
  * This is separate so we can run tests on
  * optimize before handling image or fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts', 'gallery'], function () {
+gulp.task('build', ['optimize', 'images', 'fonts', 'gallery', 'resources'], function () {
     log('Building everything');
 
     var msg = {

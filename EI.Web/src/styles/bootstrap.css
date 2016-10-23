@@ -10468,7 +10468,7 @@ button.close {
     }
 
     .list-item {
-        padding-left: 0px;
+        padding-left: 15px;
     }
 
     .list-title {
@@ -10510,7 +10510,6 @@ button.close {
 
     .list-div {
         background-color: white;
-        /*margin-bottom: 20px;*/
         margin: 0px;
         padding: 0px;
     }
@@ -10521,7 +10520,6 @@ button.close {
 
     .list-item {
         padding:0px;
-        width: 120%;
     }
 
     .list-date {
@@ -10539,7 +10537,6 @@ button.close {
     .list-sub-title {
          font-size: 11px;
          margin:0px;
-         margin-right:15px;
          line-height:1.5;
     }
 
@@ -10547,7 +10544,6 @@ button.close {
         font-size: 11px;
         margin-top: 10px;
         line-height: 1.4;
-        padding-right:15px;
     }
 
 

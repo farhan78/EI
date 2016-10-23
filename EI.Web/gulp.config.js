@@ -36,6 +36,9 @@ module.exports = function() {
     gallery: [
         client + 'gallery/**'
     ],
+    resources: [
+     client + 'resources/**'
+    ],
     index: client + 'index.cshtml',
     // app js, with no specs
     js: [

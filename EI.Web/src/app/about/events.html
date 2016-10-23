@@ -3,15 +3,12 @@
     <div class="container">
         <h4 id="news" class="main-header">
             Events
-        </h4>
-        <h5 class="sub-header mid-margin-bottom">
-            Secondary text here
             <hr />
-        </h5>
+        </h4>
+
         <form class="form-inline mid-margin-bottom small-margin-left">
             <div class="form-group">
-                <input type="text" class="form-control" style="width:300px" placeholder="Type to find events..." ng-model="vm.search" />
-
+                <input type="text" class="form-control" style="width:300px" placeholder="Search for events..." ng-model="vm.search" />
             </div>
         </form>
 
@@ -26,9 +23,11 @@
                         <span class="glyphicon glyphicon-download-alt"></span>
                         <span>{{event.ViewAs}}</span>
                     </a>
+                    <a ui-sref="gallery-viewer({galleryType:'events', id:'{{event.ID}}'})" ng-if="event.HasAlbum === true" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                        <span class="glyphicon glyphicon-th"></span>
+                        <span>View Gallery</span>
+                    </a>
                 </div>
-
-
             </div>
             <hr class="list-separator">
         </div>
