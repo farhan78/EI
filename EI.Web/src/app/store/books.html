@@ -1,0 +1,39 @@
+﻿
+<section class="well13">
+    <div class="container">
+        <h4 id="books" style="font-size:20px">
+            Publications
+            <hr />
+        </h4>
+
+        <div data-ng-repeat="book in vm.books.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+            <div class="row box-shadow">
+                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
+                    <img class="img-responsive small-margin-top small-margin-bottom" src="images/news/3_30072009836.JPG">
+                </div>
+                <div class="col-xs-9 col-sm-10">
+                    <div class="list-item">
+                        <a ui-sref="content.store.book-detail({book:book})" class="list-title">{{book.Name}}</a>
+                        <p class="list-desc">{{book.ShortDescription}}</p>
+                        <p class="list-meta-data small-margin-top"><b>Format</b>: {{book.Format}}</p>
+                        <p class="list-meta-data"><b>Date of Publish</b>: {{book.PublishDate | date : 'dd MMM yyyy'}}</p>
+                        <p class="list-meta-data"><b>Availability</b>: {{book.Availability}}</p>
+                        <div ng-if="book.Price > 0 || book.SpecialOfferPrice > 0">
+                            <p ng-if="book.SpecialOfferPrice > 0 && book.SpecialOfferPrice < book.Price" class="list-sub-title small-margin-top">{{book.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{book.Price | currency:"£"}}</strike> ({{book.DiscountPercent}}% off)</span></p>
+                            <p ng-if="book.SpecialOfferPrice === 0 || book.SpecialOfferPrice === book.Price" class="list-sub-title small-margin-top">{{book.Price | currency:"£"}}</p>
+                        </div>
+                        <button ng-if="book.AvailableForPurchase===true" ng-click="vm.addToBasket(book, 'Book')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span>Add to Basket</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="list-separator">
+        </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.books.length > vm.maxSize"
+                        total-items="vm.books.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+    </div>
+</section>

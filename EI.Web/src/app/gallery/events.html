@@ -1,26 +1,28 @@
 ﻿<section class="well3">
     <div class="container-fluid">
-        <h4 style="font-size:20px">
+        <h4 style="font-size:20px" class="mid-margin-top">
             Events
+            <hr />
         </h4>
-        <div infinite-scroll="vm.getEvents()" infinite-scroll-disabled="vm.busy" infinite-scroll-distance="0">
-            <div class="row row-no-gutter">
-                <div ng-repeat="event in vm.events" class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="thumbnail">
-                        <img ng-src="gallery/events/470/header.jpg" alt="">
-                        <div class="caption">
-                            <h5 style="font-size:20px;line-height: 1.2;" class="white">
-                                <a ui-sref="gallery-viewer({galleryType:'events', id:'{{event.ID}}'})">
-                                    {{event.Name}}<br />
-                                    <small>{{event.StartDate | date:'MMMM y'}}</small>
-                                </a>
-                            </h5>
-                        </div>
+        <div class="row">
+            <div data-ng-repeat="event in vm.events.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img ng-src="gallery/events/470/header.jpg" alt="">
+                    <div class="caption">
+                        <h5>
+                            <a ui-sref="gallery-viewer({galleryType:'events', id:'{{event.ID}}'})">
+                                {{event.Name}}<br />
+                                <small>{{event.StartDate | date:'MMMM y'}}</small>
+                            </a>
+                        </h5>
                     </div>
-                    <div style="clear: both"></div>
                 </div>
-                <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.busy && !vm.done"></div>  
             </div>
         </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.events.length > vm.maxSize"
+                        total-items="vm.events.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
     </div>
+
 </section>

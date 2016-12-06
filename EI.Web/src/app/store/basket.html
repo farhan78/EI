@@ -1,0 +1,81 @@
+﻿
+<section class="well13">
+
+    <div class="container basket" style="min-height:500px">
+        <div ng-if="vm.basket.length === 0">
+            <div class="row box-shadow small-padding">
+                <span class="mid-margin-left">There are no items in your basket</span> 
+            </div>
+            <div class="mid-margin-top">
+                <a class="link" ui-sref="content.store.books"><span class="glyphicon glyphicon-backward"></span> Back to Store</a>
+            </div>
+        </div>
+        <div ng-if="vm.basket.length > 0">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <h4 id="books" style="font-size:20px">
+                            Shopping Basket
+                        </h4>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>Price</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <p>Quantity</p>
+                    </div>
+                </div>
+                <hr />
+            </div>
+
+            <div data-ng-repeat="item in vm.basket" class="col-xs-12" style="background-color:white">
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
+                            <img class="small-margin-top small-margin-bottom" src="images/news/3_30072009836.JPG">
+                        </div>
+                        <div class="col-xs-9 col-sm-10">
+                            <div class="list-item">
+                                <p class="list-title">{{item.ProductName}}</p>
+                                <a class="link-small" ng-click="vm.removeItem(item)">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class="small-margin-top">{{item.Price | currency:"£"}}</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="text" class="small-margin-top tiny-padding text-center" maxlength="2" style="width:40px;line-height:1" ng-model="item.Quantity" />
+                        <button class="btn btn-xs" ng-click="vm.updateQuantity(item)">Update</button>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="pull-right">
+                        <p><b>Sub-Total ({{vm.totalItems}} items) : {{vm.subTotal | currency : "£"}}</b></p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="pull-right">
+                        <p><b>Postage : {{vm.postage | currency : "£"}}</b></p>
+                    </div>
+
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="pull-right" style="color:#A67B08">
+                        <p><b>Total : {{vm.subTotal + vm.postage | currency : "£"}}</b></p>
+                    </div>
+                </div>
+                <div class="row mid-margin-top">
+                    <div class="pull-right link">
+                        <a ui-sref="content.store.paypal-processing({invoice:vm.invoice})"><img src="images/paypal_checkout.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

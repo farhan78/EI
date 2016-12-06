@@ -1,0 +1,85 @@
+﻿(function () {
+    'use strict';
+
+    angular
+      .module('app.store')
+      .run(appRun);
+
+    appRun.$inject = ['routerHelper'];
+    /* @ngInject */
+    function appRun(routerHelper) {
+        routerHelper.configureStates(getStates());
+    }
+
+    function getStates() {
+        return [
+                 {
+                     state: 'content.store',
+                     config: {
+                         url: '/store',
+                         templateUrl: 'app/store/store.html',
+                         controller: 'StoreController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.books',
+                     config: {
+                         url: '/publications',
+                         templateUrl: 'app/store/books.html',
+                         controller: 'BooksController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.book-detail',
+                     config: {
+                         url: '/publication-detail',
+                         templateUrl: 'app/store/book-detail.html',
+                         controller: 'BookDetailController',
+                         controllerAs: 'vm',
+                         params: {
+                             book: {
+                                 value: null,
+                                 squash: true,
+                             }
+                         }
+                     }
+                 },
+                 {
+                      state: 'content.store.basket',
+                      config: {
+                          url: '/shopping-basket',
+                          templateUrl: 'app/store/basket.html',
+                          controller: 'BasketController',
+                          controllerAs: 'vm'
+                      }
+                 },
+                  {
+                      state: 'content.store.paypal-processing',
+                      config: {
+                          url: '/paypal-processing',
+                          templateUrl: 'app/store/paypal-processing.html',
+                          controller: 'PaypalController',
+                          controllerAs: 'vm',
+                          params: {
+                              invoice: {
+                                  value: null,
+                                  squash: true,
+                              }
+                          }
+                      }
+                  },
+                  {
+                      state: 'content.store.thankyou',
+                      config: {
+                          url: '/thankyou?invoiceId',
+                          templateUrl: 'app/store/thankyou.html',
+                          controller: 'BasketController',
+                          controllerAs: 'vm'
+                      }
+                  },
+                
+        ];
+    }
+})();

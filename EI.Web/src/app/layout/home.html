@@ -1,5 +1,5 @@
 <div class="page" id="mainDiv">
-  
+
     <header class="">
         <div id="stuck_container" class="stuck_container">
             <div class="container-fluid">
@@ -66,10 +66,10 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="index-4.html">Store</a>
+                            <a ui-sref="content.store.books">Store</a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="#">Publications</a>
+                                    <a ui-sref="content.store.books">Publications</a>
                                 </li>
                                 <li>
                                     <a href="#">Posters</a>
@@ -87,12 +87,23 @@
                                     <a href="#">Free Downloads</a>
                                 </li>
                             </ul>
-                        </li>c
+                        </li>
                         <li>
                             <a href="index-4.html">Support Us</a>
                         </li>
                         <li>
                             <a href="index-4.html">Contact</a>
+                        </li>
+                        <li class="dropdown" ui-sref-active="active" ng-if="vm.basket.length > 0">
+                            <a usref="" class="btn btn-xs btn-responsive"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge tiny-margin-left tiny-margin-bottom">{{vm.totalItems}}</span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a ui-sref="content.store.basket">View Basket</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="content.store.paypal-processing({invoice:vm.invoice})">Paypal Checkout</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -103,12 +114,34 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                     <h1 class="navbar-brand">
-                        <a href="./">exhibition islam</a>
+                        <a ui-sref="home">exhibition islam</a>
                         <small>
                             #pioneers
                         </small>
                     </h1>
                 </div>
+
+            </div>
+            <div class="pull-right social">
+                <ul class="inline-list">
+                    <li>
+                        <a href="#" class="social-no-mobile">
+                            <img width="100" height="100" src="images/logo_white.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-facebook">facebook</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter">twitter</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa  fa-google-plus">google-plus</a>
+                    </li>
+                    <li style="padding-left:5px">
+                        <a href="#" class="fa  fa-linkedin">linkedIn</a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -169,9 +202,9 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="row">
                             <div class="well5 col-lg-12  bg-image bg-image-11">
-                            <!--<div class="col-lg-12 well4 parallax ins3 center991" data-url="../srcimages/page-1_img03.jpg"
-                                 data-mobile="true"
-                                 data-speed="0.5">-->
+                                <!--<div class="col-lg-12 well4 parallax ins3 center991" data-url="../srcimages/page-1_img03.jpg"
+                                     data-mobile="true"
+                                     data-speed="0.5">-->
                                 <h5>
                                     Events
                                 </h5>
@@ -315,58 +348,79 @@
                         </h4>
                         <ul class="list-inline partners">
                             <li>
-                                <img src="../src/images/logos/logo1.jpg" />
+                                <img src="images/logos/logo1.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo2.jpg" />
+                                <img src="images/logos/logo2.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo3.jpg" />
+                                <img src="images/logos/logo3.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo4.jpg" />
+                                <img src="images/logos/logo4.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo5.jpg" />
+                                <img src="images/logos/logo5.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo6.jpg" />
+                                <img src="images/logos/logo6.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo7.jpg" />
+                                <img src="images/logos/logo7.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo8.jpg" />
+                                <img src="images/logos/logo8.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo9.jpg" />
+                                <img src="images/logos/logo9.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo10.jpg" />
+                                <img src="images/logos/logo10.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo11.jpg" />
+                                <img src="images/logos/logo11.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo12.jpg" />
+                                <img src="images/logos/logo12.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo13.jpg" />
+                                <img src="images/logos/logo13.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo14.jpg" />
+                                <img src="images/logos/logo14.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo15.jpg" />
+                                <img src="images/logos/logo15.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo16.jpg" />
+                                <img src="images/logos/logo16.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo17.jpg" />
+                                <img src="images/logos/logo17.jpg" />
                             </li>
                             <li>
-                                <img src="../src/images/logos/logo18.jpg" />
+                                <img src="images/logos/logo18.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo19.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo20.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo21.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo22.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo23.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo24.jpg" />
+                            </li>
+                            <li>
+                                <img src="images/logos/logo25.jpg" />
                             </li>
                         </ul>
                     </div>

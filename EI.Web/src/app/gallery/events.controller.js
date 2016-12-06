@@ -13,13 +13,15 @@
 
         var vm = this;
         vm.events = [];
-        vm.busy = false;
-        vm.done = false;
-        vm.after = 0;
         vm.loading = true;
 
+        vm.maxSize = 18;
+        vm.currentPage = 1;
+        vm.totalItems = 0;
+
         vm.getEvents = getEvents;
-     
+        vm.goToTop = goToTop;
+
         activate();
 
         function activate() {
@@ -27,44 +29,24 @@
 
             var promises = [];
             var params = $stateParams.params;
-            vm.after = 0;
-           // promises.push(getEvents());
-          
+            promises.push(getEvents());
+
             return $q.all(promises)
                 .then(function () {
-
 
                 });
         }
 
         function getEvents() {
-          
-            if (vm.done || vm.busy) {
-                return;
-            }
-
-            vm.busy = true;
-            return galleryDataService.getEvents(vm.after)
+            return galleryDataService.getEvents()
                 .then(function (data) {
-                
-                    if (data.length === 0)
-                    {
-                        vm.done = true;
-                        return;
-                    }
-
-                    if (data.length > 0) {
-                        vm.after = data[data.length - 1].ID;
-                    }
-
-                    angular.forEach(data, function (item) {
-
-                        vm.events.push(item);
-                    });
-                
-                    vm.busy = false;
-                    return;
+                    vm.events = data;
+                    vm.loading = false;
                 });
+        }
+
+        function goToTop() {
+            $anchorScroll($('#events'));
         }
     }
 })();

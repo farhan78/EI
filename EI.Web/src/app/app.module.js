@@ -7,7 +7,8 @@
     'app.layout',
     'app.about',
     'app.services',
-    'app.gallery'
+    'app.gallery',
+    'app.store'
   ]);
 
 })();

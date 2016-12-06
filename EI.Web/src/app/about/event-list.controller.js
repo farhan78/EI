@@ -77,25 +77,6 @@
             }
         }
 
-        //function selectedEventPeriodChanged()
-        //{
-        //    if (vm.events.length > 0)
-        //    {
-        //        vm.selectedPastYear = moment().year().toString();
-        //        vm.filteredEvents = $filter('filter')(vm.events, filterEvents);
-        //        vm.filteredEvents = $filter('filter')(vm.filteredEvents, vm.search);
-        //    }
-        //}
-
-        //function selectedPastYearChanged() {
-
-        //    if (vm.events.length > 0) {
-
-        //        vm.filteredEvents = $filter('filter')(vm.events, filterEvents);
-
-        //    }
-        //}
-
         function searchChanged() {
             vm.filteredEvents = $filter('filter')(vm.events, vm.search);
      //       vm.filteredEvents = $filter('filter')(vm.filteredEvents, vm.filterEvents);

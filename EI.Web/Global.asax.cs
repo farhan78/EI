@@ -24,6 +24,13 @@ namespace EI.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalConfiguration.Configuration.EnsureInitialized();
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
+          
+        }
+
+        void Session_Start(object sender, EventArgs e)
+        {
+            Invoice inv = new Invoice(System.Web.HttpContext.Current.Session.SessionID);
+            System.Web.HttpContext.Current.Session["Invoice"] = inv;
         }
     }
 }

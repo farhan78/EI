@@ -19,13 +19,36 @@
             replace: true
         };
 
-        ContentTopNavController.$inject = ['$scope', '$location', '$compile'];
+        ContentTopNavController.$inject = ['$scope', '$location', '$compile','$state','storeDataService'];
 
         /* @ngInject */
-        function ContentTopNavController($scope, $location, $compile) {
+        function ContentTopNavController($scope, $location, $compile,$state, storeDataService) {
             var vm = this;
             //vm.linkTo = linkTo;
+       
+            vm.invoice = null;
+            vm.basket = [];
+            vm.totalItems = 0;
+            getBasketContent();
 
+            function getBasketContent() {
+              
+                return storeDataService.getBasketContent()
+                .then(function (data) {
+                   
+                    if ($state.current.name !== 'content.store.thankyou') {
+                        vm.invoice = data;
+                        vm.basket = data.InvoiceItems;
+
+                        angular.forEach(vm.basket, function (item) {
+
+                            vm.totalItems += item.Quantity;
+                        });
+                    }
+                        
+                });
+            };
+       
             $('#stuck_container').TMStickUp({});
             var element = angular.element('.stuck_container.isStuck');
             $compile(element.contents())($scope);
@@ -39,6 +62,7 @@
             }
 
             $('.sf-menu').superfish();
+         
          
         }
 
