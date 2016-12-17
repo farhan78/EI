@@ -255,7 +255,7 @@
     <Content Include="build\images\page-1_img10_original.jpg" />
     <Content Include="build\images\reports\1_r1.jpg" />
     <Content Include="build\images\services.jpg" />
-    <Content Include="build\js\app-5fe215b4cb.js" />
+    <Content Include="build\js\app-b52ed66b4d.js" />
     <Content Include="build\js\lib-3608783ae2.js" />
     <Content Include="build\styles\custom-15dab742a3.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />
@@ -396,6 +396,7 @@
     <Content Include="src\images\about.jpg" />
     <Content Include="src\images\AngularJS-small.png" />
     <Content Include="src\images\busy.gif" />
+    <Content Include="src\images\contact2.jpg" />
     <Content Include="src\images\gulp-tiny.png" />
     <Content Include="src\images\home.jpg" />
     <Content Include="src\images\icon.png" />
@@ -424,6 +425,7 @@
     <Content Include="src\images\logos\logo7.jpg" />
     <Content Include="src\images\logos\logo8.jpg" />
     <Content Include="src\images\logos\logo9.jpg" />
+    <Content Include="src\images\logo_white.jpg" />
     <Content Include="src\images\logo_white.png" />
     <Content Include="src\images\news\3_30072009836.JPG" />
     <Content Include="src\images\page-1_img01.jpg" />
@@ -441,6 +443,8 @@
     <Content Include="src\images\paypal.png" />
     <Content Include="src\images\paypal_checkout.png" />
     <Content Include="src\images\services.jpg" />
+    <Content Include="src\images\services2.jpg" />
+    <Content Include="src\images\support.jpg" />
     <Content Include="src\js\camera.js" />
     <Content Include="src\js\jquery-migrate-1.2.1.min.js" />
     <Content Include="src\js\jquery.cookie.js" />
