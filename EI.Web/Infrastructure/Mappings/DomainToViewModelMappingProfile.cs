@@ -22,6 +22,9 @@ namespace EI.Web.Infrastructure.Mappings
             Mapper.CreateMap<News, NewsViewModel>();
             Mapper.CreateMap<Report, ReportViewModel>();
             Mapper.CreateMap<Book, BookViewModel>();
+            Mapper.CreateMap<Quote, QuoteViewModel>();
+            Mapper.CreateMap<Leaflet, LeafletViewModel>()
+                    .ForMember(l => l.CategoryName, opt => opt.MapFrom(s => s.LeafletCategory.Category));
         }
     }
 }

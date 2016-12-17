@@ -27,7 +27,7 @@
             //}
          
             return $http({
-                    url: '../api/events/',
+                    url: '../api/events/get',
                     method: 'GET',
                     params: { after: after }
                 })
@@ -50,7 +50,7 @@
             //}
 
             return $http({
-                url: '../api/posters/',
+                url: '../api/posters/get',
                 method: 'GET',
                 params: { after: after }
             })

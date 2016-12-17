@@ -1,0 +1,34 @@
+﻿
+<section class="well13">
+    <div class="container">
+        <div>
+            <a class="link" ui-sref="content.store.leaflets"><span class="glyphicon glyphicon-backward"></span> Back to Publications</a>
+            <hr />
+        </div>
+
+        <div class="col-xs-12 list-div">
+            <div class="row box-shadow">
+                <div class="col-xs-3 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
+                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + vm.leaflet.ImageUrl | encodeUri}}">
+                </div>
+                <div class="col-xs-8 col-sm-9">
+                    <div class="list-item">
+                        <p class="list-title" style="color:black">{{vm.leaflet.Name}}</p>
+                        <div ng-if="vm.leaflet.Price > 0 || vm.leaflet.SpecialOfferPrice > 0">
+                            <p ng-if="vm.leaflet.SpecialOfferPrice > 0 && vm.leaflet.SpecialOfferPrice < vm.leaflet.Price" class="list-sub-title small-margin-top">{{vm.leaflet.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{vm.leaflet.Price | currency:"£"}}</strike> ({{vm.leaflet.DiscountPercent}}% off)</span></p>
+                            <p ng-if="vm.leaflet.SpecialOfferPrice === 0 || vm.leaflet.SpecialOfferPrice === vm.leaflet.Price" class="list-sub-title small-margin-top">{{vm.leaflet.Price | currency:"£"}}</p>
+                        </div>
+                        <p class="list-meta-data"><b>Availability</b>: {{vm.leaflet.Availability}}</p>
+                        <button ng-click="vm.addToBasket(vm.leaflet, 'Leaflet')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span>Add to Basket</span>
+                        </button>
+                        <hr />
+                        <p class="list-desc" ng-bind-html="vm.leaflet.LongDescription"></p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -245,11 +245,11 @@ th {
         content: "";
     }
 
-    pre,
+    /*pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
-    }
+    }*/
 
     thead {
         display: table-header-group;
@@ -2248,7 +2248,7 @@ html {
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family:  sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 1.9375;
@@ -3802,7 +3802,7 @@ abbr[data-original-title] {
     text-transform: uppercase;
 }
 
-blockquote {
+/*blockquote {
     margin: 0;
     font-style: normal;
 }
@@ -3885,7 +3885,36 @@ blockquote {
         .blockquote-reverse .small:after,
         blockquote.pull-right .small:after {
             content: '\00A0 \2014';
-        }
+        }*/
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #A67B08;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  visibility: hidden;
+  color: #111;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
 
 address {
     font-style: normal;
@@ -10461,7 +10490,7 @@ button.close {
 
 .main-body {
     background-color:#faf6f6;
-    border-top:4px solid #A67B08;
+    border-top:6px solid #A67B08;
 }
 
 .main-header {
@@ -10488,12 +10517,19 @@ button.close {
     text-align: left;
 }
 
-.list-item a, .link {
-    color:#0066C0;
 
+.list-title {
+    font-size: 20px;
+    line-height: 1.0;
+    text-transform: none;
+    color: #686666;
 }
 
-.list-item a:hover, .link:hover {
+.link {
+    color:#0066C0;
+}
+
+.link:hover {
     color:#A67B08;
      cursor:pointer;
      text-decoration:underline;
@@ -10501,14 +10537,6 @@ button.close {
 
 .link-small {
    font-size:10pt;
-}
-
-
-.list-title {
-    font-size: 20px;
-    line-height: 1.0;
-    text-transform: none;
-    color: #686666;
 }
 
 .list-sub-title {

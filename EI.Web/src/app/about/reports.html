@@ -9,10 +9,10 @@
         <div data-ng-repeat="report in vm.reports.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
 
             <div class="row box-shadow">
-                <div class="col-xs-1 list-image" style="padding-left:0px;">
-                    <img class="img-responsive" src="images/reports/1_r1.jpg">
+                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile" style="padding-left:0px;">
+                    <img class="img-responsive" ng-src="{{'src/' + report.ImageUrl | encodeUri}}">
                 </div>
-                <div class="col-xs-11">
+                <div class="col-xs-9 col-sm-10">
                     <div class="list-item">
                         <p class="list-title">{{report.Name}}</p>
                         <p class="list-date">{{report.DateSubmitted | date:'dd MMMM yyyy'}}</p>

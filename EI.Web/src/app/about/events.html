@@ -7,26 +7,28 @@
         </h4>
 
         <form class="form-inline mid-margin-bottom small-margin-left">
-            <div class="form-group">
+            <div class="row form-group">
                 <input type="text" class="form-control" style="width:300px" placeholder="Search for events..." ng-model="vm.search" />
             </div>
         </form>
 
         <div data-ng-repeat="event in vm.filteredEvents.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
-            <div class="box-shadow">
-                <div class="list-item">
-                    <p class="list-title">{{event.Name}}</p>
-                    <p class="list-sub-title">{{event.Venue}}</p>
-                    <p class="list-date">{{event.StartDateString}} - {{event.EndDateString}} | <span class="label" ng-class="{'label-default': event.EventPeriod === 'Completed','label-warning': event.EventPeriod === 'Ongoing','label-danger': event.EventPeriod === 'Forthcoming'}">{{event.EventPeriod}}</span></p>
-                    <p class="list-desc">{{event.Description}}</p>
-                    <a href="{{event.ViewLink}}" ng-if="event.ViewLink !== null && event.ViewAs !== null" class="btn btn-primary btn-sm btn-responsive small-margin-top" download>
-                        <span class="glyphicon glyphicon-download-alt"></span>
-                        <span>{{event.ViewAs}}</span>
-                    </a>
-                    <a ui-sref="gallery-viewer({galleryType:'events', id:'{{event.ID}}'})" ng-if="event.HasAlbum === true" class="btn btn-primary btn-sm btn-responsive small-margin-top">
-                        <span class="glyphicon glyphicon-th"></span>
-                        <span>View Gallery</span>
-                    </a>
+            <div class="row box-shadow">
+                <div class="col-xs-12">
+                    <div class="list-item">
+                        <p class="list-title">{{event.Name}}</p>
+                        <p class="list-sub-title">{{event.Venue}}</p>
+                        <p class="list-date">{{event.StartDateString}} - {{event.EndDateString}} | <span class="label" ng-class="{'label-default': event.EventPeriod === 'Completed','label-warning': event.EventPeriod === 'Ongoing','label-danger': event.EventPeriod === 'Forthcoming'}">{{event.EventPeriod}}</span></p>
+                        <p class="list-desc">{{event.Description}}</p>
+                        <a href="{{event.ViewLink}}" ng-if="event.ViewLink !== null && event.ViewAs !== null" class="btn btn-primary btn-sm btn-responsive small-margin-top" download>
+                            <span class="glyphicon glyphicon-download-alt"></span>
+                            <span>{{event.ViewAs}}</span>
+                        </a>
+                        <a ui-sref="gallery-viewer({galleryType:'events', id:'{{event.ID}}'})" ng-if="event.HasAlbum === true" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                            <span class="glyphicon glyphicon-th"></span>
+                            <span>View Gallery</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <hr class="list-separator">

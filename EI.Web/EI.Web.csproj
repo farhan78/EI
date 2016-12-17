@@ -255,9 +255,9 @@
     <Content Include="build\images\page-1_img10_original.jpg" />
     <Content Include="build\images\reports\1_r1.jpg" />
     <Content Include="build\images\services.jpg" />
-    <Content Include="build\js\app-17fff256c0.js" />
-    <Content Include="build\js\lib-c1457a481f.js" />
-    <Content Include="build\styles\custom-b9bc1b0192.css" />
+    <Content Include="build\js\app-5fe215b4cb.js" />
+    <Content Include="build\js\lib-3608783ae2.js" />
+    <Content Include="build\styles\custom-15dab742a3.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />
     <Content Include="Content\css\blank.gif" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -286,11 +286,18 @@
     <Content Include="src\app\about\about.html" />
     <Content Include="src\app\about\event-list.controller.js" />
     <Content Include="src\app\about\events.html" />
+    <Content Include="src\app\about\testimonials.html" />
     <Content Include="src\app\about\news.controller.js" />
     <Content Include="src\app\about\news.html" />
     <Content Include="src\app\about\portfolio.html" />
     <Content Include="src\app\about\reports.controller.js" />
     <Content Include="src\app\about\reports.html" />
+    <Content Include="src\app\about\testimonials.controller.js" />
+    <Content Include="src\app\other\contact.html" />
+    <Content Include="src\app\other\privacy-policy.html" />
+    <Content Include="src\app\other\disclaimer.html" />
+    <Content Include="src\app\other\other.controller.js" />
+    <Content Include="src\app\other\support.html" />
     <Content Include="src\app\gallery\events.controller.js" />
     <Content Include="src\app\gallery\gallery.dataservice.js" />
     <Content Include="src\app\gallery\gallery.controller.js" />
@@ -345,8 +352,12 @@
     <Content Include="src\app\layout\home.html" />
     <Content Include="src\app\store\basket.controller.js" />
     <Content Include="src\app\store\basket.html" />
+    <Content Include="src\app\store\leaflet-detail.html" />
+    <Content Include="src\app\store\leaflet-detail.controller.js" />
     <Content Include="src\app\store\book-detail.controller.js" />
     <Content Include="src\app\store\book-detail.html" />
+    <Content Include="src\app\store\leaflets.html" />
+    <Content Include="src\app\store\leaflets.controller.js" />
     <Content Include="src\app\store\books.controller.js" />
     <Content Include="src\app\store\books.html" />
     <Content Include="src\app\store\paypal-controller.js" />
@@ -356,7 +367,6 @@
     <Content Include="src\app\store\store.html" />
     <Content Include="src\app\store\store.module.js" />
     <Content Include="src\app\store\store.route.js" />
-    <Content Include="src\app\store\thankyou.controller.js" />
     <Content Include="src\app\store\thankyou.html" />
     <Content Include="src\app\widgets\widgets.module.js" />
     <Content Include="src\fonts\fontawesome-webfont.svg" />
@@ -468,11 +478,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BasketController.cs" />
+    <Compile Include="Controllers\LeafletsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PostersController.cs" />
+    <Compile Include="Controllers\QuotesController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -490,15 +502,19 @@
     <Compile Include="Infrastructure\MessageHandlers\EIAuthHandler.cs" />
     <Compile Include="Infrastructure\Session\SessionEnabledControllerHandler.cs" />
     <Compile Include="Infrastructure\Session\SessionEnabledHttpControllerRouteHandler.cs" />
+    <Compile Include="Infrastructure\Validators\LeafletViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\BookViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\EventViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\NewsViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\PosterViewModelValidator.cs" />
+    <Compile Include="Infrastructure\Validators\QuoteViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\ReportViewModelValidator.cs" />
+    <Compile Include="Models\LeafletViewModel.cs" />
     <Compile Include="Models\BookViewModel.cs" />
     <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\NewsViewModel.cs" />
     <Compile Include="Models\PosterViewModel.cs" />
+    <Compile Include="Models\QuoteViewModel.cs" />
     <Compile Include="Models\ReportViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -539,7 +555,6 @@
     <Content Include="build\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="build\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="build\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="build\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\EI.pubxml" />
     <Content Include="src\fonts\fontawesome-webfont.eot" />
     <Content Include="src\fonts\fontawesome-webfont.ttf" />

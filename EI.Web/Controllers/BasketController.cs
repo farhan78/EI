@@ -19,11 +19,12 @@ namespace EI.Web.Controllers
     public class BasketController : System.Web.Http.ApiController
     {
         private readonly IEntityBaseRepository<Book> _booksRepository;
-        //private readonly IEntityBaseRepository<Book> _booksRepository;
+        private readonly IEntityBaseRepository<Leaflet> _leafletsRepository;
 
-        public BasketController(IEntityBaseRepository<Book> booksRepository)
+        public BasketController(IEntityBaseRepository<Book> booksRepository, IEntityBaseRepository<Leaflet> leafletsRepository)
         {
             _booksRepository = booksRepository;
+            _leafletsRepository = leafletsRepository;
         }
 
         [AllowAnonymous]
@@ -74,13 +75,15 @@ namespace EI.Web.Controllers
                     {
                         invItem.Price = book.Price * qty;
                         invItem.Promotion = false;
+                        invItem.UnitPrice = book.Price;
                     }
                     else
                     {
                         invItem.Price = book.SpecialOfferPrice * qty;
                         invItem.Promotion = false;
+                        invItem.UnitPrice = book.SpecialOfferPrice;
                     }
-                    invItem.UnitPrice = book.Price;
+                    
                     invItem.ShippingCost = book.PostagePrice;
                     invItem.HandlingCost = book.PostagePrice;
                     invItem.Type = "Book";
@@ -88,22 +91,27 @@ namespace EI.Web.Controllers
                 }
                 else if (type == "Leaflet")
                 {
-                    //var leaflet = _leafletsRepository.GetSingle(id);
-                    //product.ProductId = leaflet.ID;
-                    //product.Name = leaflet.Name;
-                    //product.Description = leaflet.ShortDescription;
-                    //product.Picture = leaflet.ImageUrl;
-                    //if (leaflet.SpecialOfferPrice == 0)
-                    //{
-                    //    product.Price = leaflet.Price;
-                    //    product.Promotion = false;
-                    //}
-                    //else
-                    //{
-                    //    product.Price = leaflet.SpecialOfferPrice;
-                    //    product.Promotion = false;
-                    //}
-                    //product.Handling = leaflet.PostagePrice;
+                    var leaflet = _leafletsRepository.GetSingle(id);
+                    invItem.ProductId = leaflet.ID;
+                    invItem.ProductName = leaflet.Name;
+                    invItem.ImageUrl = leaflet.ImageUrl;
+                    invItem.Quantity = qty;
+                    if (leaflet.SpecialOfferPrice == 0)
+                    {
+                        invItem.Price = leaflet.Price * qty;
+                        invItem.Promotion = false;
+                        invItem.UnitPrice = leaflet.Price;
+                    }
+                    else
+                    {
+                        invItem.Price = leaflet.SpecialOfferPrice * qty;
+                        invItem.Promotion = false;
+                        invItem.UnitPrice = leaflet.SpecialOfferPrice;
+                    }
+                 
+                    invItem.ShippingCost = leaflet.PostagePrice;
+                    invItem.HandlingCost = leaflet.PostagePrice;
+                    invItem.Type = "Leaflet";
                 }
 
                 SelectedInvoice.InvoiceItems.Add(invItem);

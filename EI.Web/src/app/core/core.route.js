@@ -54,7 +54,43 @@
                    controllerAs: 'vm',
                    title: 'gallery'
                }
-           },
+          },
+          {
+              state: 'content.disclaimer',
+              config: {
+                  url: '/disclaimer',
+                  templateUrl: 'app/other/disclaimer.html',
+                  controller: 'OtherController',
+                  controllerAs: 'vm',
+              }
+          },
+          {
+              state: 'content.privacy-policy',
+              config: {
+                  url: '/privacy-policy',
+                  templateUrl: 'app/other/privacy-policy.html',
+                  controller: 'OtherController',
+                  controllerAs: 'vm',
+              }
+          },
+          {
+              state: 'content.contact',
+              config: {
+                  url: '/contact',
+                  templateUrl: 'app/other/contact.html',
+                  controller: 'OtherController',
+                  controllerAs: 'vm',
+              }
+          },
+          {
+              state: 'content.support',
+              config: {
+                  url: '/support-us',
+                  templateUrl: 'app/other/support.html',
+                  controller: 'OtherController',
+                  controllerAs: 'vm',
+              }
+          }
         ];
     }
 })();

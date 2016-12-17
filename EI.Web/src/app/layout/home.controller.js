@@ -5,9 +5,9 @@
       .module('app.layout')
       .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$rootScope', '$timeout', 'config', 'logger', '$compile', '$anchorScroll', 'storeDataService'];
+    HomeController.$inject = ['$rootScope', '$q', 'config', 'logger', '$compile', '$anchorScroll', 'storeDataService', 'aboutDataService'];
     /* @ngInject */
-    function HomeController($rootScope, $timeout, config, logger, $compile, $anchorScroll, storeDataService) {
+    function HomeController($rootScope, $q, config, logger, $compile, $anchorScroll, storeDataService, aboutDataService) {
 
         var vm = this;
         vm.busyMessage = 'Please wait ...';
@@ -15,7 +15,8 @@
         vm.invoice = null;
         vm.basket = [];
         vm.totalItems = 0;
-
+        vm.quote = null;
+     
         vm.navline = {
             title: config.appTitle,
             text: 'Created by Hartech Solutions Ltd.',
@@ -47,7 +48,14 @@
 
             $anchorScroll($('#mainDiv'));
 
-            getBasketContent();
+            var promises = [];
+            promises.push(getBasketContent(), getQuote());
+
+            return $q.all(promises)
+                .then(function () {
+
+
+                });
         }
 
         function getBasketContent() {
@@ -66,5 +74,12 @@
             });
         };
 
+        function getQuote() {
+            return aboutDataService.getRandomQuote()
+            .then(function (data) {
+
+                vm.quote = data;
+            });
+        }
     }
 })();

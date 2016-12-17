@@ -9,11 +9,11 @@
         <div data-ng-repeat="book in vm.books.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
             <div class="row box-shadow">
                 <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
-                    <img class="img-responsive small-margin-top small-margin-bottom" src="images/news/3_30072009836.JPG">
+                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + book.ImageUrl | encodeUri}}">
                 </div>
                 <div class="col-xs-9 col-sm-10">
                     <div class="list-item">
-                        <a ui-sref="content.store.book-detail({book:book})" class="list-title">{{book.Name}}</a>
+                        <a ui-sref="content.store.book-detail({book:book})" class="link list-title">{{book.Name}}</a>
                         <p class="list-desc">{{book.ShortDescription}}</p>
                         <p class="list-meta-data small-margin-top"><b>Format</b>: {{book.Format}}</p>
                         <p class="list-meta-data"><b>Date of Publish</b>: {{book.PublishDate | date : 'dd MMM yyyy'}}</p>

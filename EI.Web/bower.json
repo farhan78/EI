@@ -2,7 +2,7 @@
   "name": "EI",
   "version": "0.0.1",
   "description": "Exhibition Islam",
-  "authors": [ ],
+  "authors": [],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -32,7 +32,8 @@
     "devicejs": "",
     "jquery-migrate": "1.2.1",
     "animate.css": "",
-    "ngInfiniteScroll": "1.0.0"
+    "ngInfiniteScroll": "1.0.0",
+    "angular-encode-uri": "^1.0.0"
   },
   "resolutions": {
     "angular": "1.5.3"

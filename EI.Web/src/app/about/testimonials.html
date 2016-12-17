@@ -1,0 +1,32 @@
+﻿
+<section class="well13">
+    <div class="container">
+        <h4 id="quotes" class="main-header">
+            Testimonials
+            <hr />
+        </h4>
+
+      
+        <div data-ng-repeat="quote in vm.quotes.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+
+            <div class="row box-shadow">
+                <div class="col-xs-12">
+                    <div class="list-item">
+                        <p class="list-title">{{quote.Organisation}}</p>
+                        <p class="list-date">{{quote.DateSubmitted | date:'dd MMMM yyyy'}}</p>
+                        <blockquote><p ng-bind-html="quote.Description"></p></blockquote>
+                        <p class="list-desc"><b>{{quote.Name}}</b></p>
+                        <p class="list-meta-data">{{quote.Designation}}</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="list-separator">
+        </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.quotes.length > vm.maxSize"
+                        total-items="vm.quotes.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+﻿
+<section class="well13">
+    <div class="container">
+        <h4 id="leaflets" style="font-size:20px">
+            Leaflets
+            <hr />
+        </h4>
+
+        <div data-ng-repeat="leaflet in vm.leaflets.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+            <div class="row box-shadow">
+                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
+                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + leaflet.ImageUrl | encodeUri}}">
+                </div>
+                <div class="col-xs-9 col-sm-10">
+                    <div class="list-item">
+                        <p class="list-meta-data">{{leaflet.CategoryName}}</p>
+                        <a ui-sref="content.store.leaflet-detail({leaflet:leaflet})" class="link list-title">{{leaflet.Name}}</a>
+                        <p class="list-desc">{{leaflet.Description}}</p>
+                        <p class="list-meta-data small-margin-top"><b>Format</b>: {{leaflet.Format}}</p>
+                        <p class="list-meta-data"><b>Date of Publish</b>: {{leaflet.PublishDate | date : 'dd MMM yyyy'}}</p>
+                        <p class="list-meta-data"><b>Availability</b>: {{leaflet.Availability}}</p>
+                        <div ng-if="leaflet.Price > 0 || leaflet.SpecialOfferPrice > 0">
+                            <p ng-if="leaflet.SpecialOfferPrice > 0 && leaflet.SpecialOfferPrice < leaflet.Price" class="list-sub-title small-margin-top">{{leaflet.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{leaflet.Price | currency:"£"}}</strike> ({{leaflet.DiscountPercent}}% off)</span></p>
+                            <p ng-if="leaflet.SpecialOfferPrice === 0 || leaflet.SpecialOfferPrice === leaflet.Price" class="list-sub-title small-margin-top">{{leaflet.Price | currency:"£"}}</p>
+                        </div>
+                        <button ng-click="vm.addToBasket(leaflet, 'Leaflet')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span>Add to Basket</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="list-separator">
+        </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.leaflets.length > vm.maxSize"
+                        total-items="vm.leaflets.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+    </div>
+</section>

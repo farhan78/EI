@@ -10,10 +10,7 @@
         <div data-ng-repeat="news in vm.news.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
 
             <div class="row box-shadow">
-                <div class="col-xs-2 list-image" style="padding-left:0px;">
-                    <img class="img-responsive" src="images/news/3_30072009836.JPG">
-                </div>
-                <div class="col-xs-10">
+                <div class="col-xs-12">
                     <div class="list-item">
                         <p class="list-title">{{news.Title}}</p>
                         <p class="list-date">{{news.NewsDate | date:'dd MMMM yyyy'}}</p>

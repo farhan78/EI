@@ -15,6 +15,7 @@
 
         var service = {
             getBooks: getBooks,
+            getLeaflets: getLeaflets,
             addToBasket: addToBasket,
             getBasketContent: getBasketContent,
             updateQuantity: updateQuantity,
@@ -31,7 +32,7 @@
             }
 
             promiseCache['books'] = $http({
-                url: '../api/books/list',
+                url: '../api/books/get',
                 method: 'GET'
             })
                 .then(success)
@@ -41,6 +42,31 @@
 
             function success(response) {
               
+                return response.data;
+            }
+
+            function fail(e) {
+                return exception.catcher('XHR Failed for getBooks')(e);
+            }
+        }
+
+        function getLeaflets() {
+
+            if (promiseCache['leaflets']) {
+                return promiseCache['leaflets']
+            }
+
+            promiseCache['leaflets'] = $http({
+                url: '../api/leaflets/get',
+                method: 'GET'
+            })
+                .then(success)
+                .catch(fail);
+
+            return promiseCache['leaflets'];
+
+            function success(response) {
+
                 return response.data;
             }
 

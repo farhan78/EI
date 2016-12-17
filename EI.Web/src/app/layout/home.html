@@ -1,4 +1,4 @@
-<div class="page" id="mainDiv">
+<div class="page" id="mainDiv" style="font-family:'Raleway'">
 
     <header class="">
         <div id="stuck_container" class="stuck_container">
@@ -24,7 +24,10 @@
                                     <a ui-sref="content.about.events">Events</a>
                                 </li>
                                 <li>
-                                    <a ui-sref="content.about.news">In the News</a>
+                                    <a ui-sref="content.about.news">News</a>
+                                </li>
+                                <li>
+                                    <a ui-sref="content.about.testimonials">Testimonials</a>
                                 </li>
                             </ul>
                         </li>
@@ -75,7 +78,7 @@
                                     <a href="#">Posters</a>
                                 </li>
                                 <li>
-                                    <a href="#">Leaflets</a>
+                                    <a ui-sref="content.store.leaflets">Leaflets</a>
                                 </li>
                                 <li>
                                     <a href="#">Stock Photos</a>
@@ -88,11 +91,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="index-4.html">Support Us</a>
+                        <li ui-sref-active="active">
+                            <a ui-sref="content.support">Support Us</a>
                         </li>
-                        <li>
-                            <a href="index-4.html">Contact</a>
+                        <li ui-sref-active="active">
+                           <a ui-sref="content.contact">Contact</a>
                         </li>
                         <li class="dropdown" ui-sref-active="active" ng-if="vm.basket.length > 0">
                             <a usref="" class="btn btn-xs btn-responsive"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge tiny-margin-left tiny-margin-bottom">{{vm.totalItems}}</span></a>
@@ -258,9 +261,19 @@
                             WE CONNECT WITH OUR EVENT PARTNERS
                             TO DELIVER EXHIBITIONS THAT INSPIRE CONFIDENCE AND BELIEF
                         </h5>
+                        <blockquote>
+                            <p style="color:black">
+                                "{{vm.quote.SDescription}}"
+                            </p>
+                        </blockquote>
                         <p>
-                            "I personally would like to extend congratulations and thanks to the EI team for their professionalism
-                            and guidance in helping put together EY's marquee Muslim event."
+                            <b>{{vm.quote.Name}}</b>
+                        </p>
+                        <p class="list-meta-data">
+                            {{vm.quote.Designation}}
+                        </p>
+                        <p class="pull-right">
+                            <a class="link" ui-sref="content.about.testimonials">more testimonials</a>&nbsp;<span class="glyphicon glyphicon-forward"></span>
                         </p>
                     </div>
                     <div class="col-lg-8 col-md-12 min-height bg-image-variant parallax bg-image-4" data-url="">
@@ -451,89 +464,5 @@
     <!--========================================================
                             FOOTER
     =========================================================-->
-    <footer>
-        <section class="well11 center991">
-            <div class="container-fluid">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="list">
-                        <li class="active">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="index-1.html">About</a>
-                        </li>
-                        <li>
-                            <a href="index-2.html">Services</a>
-                        </li>
-                        <li>
-                            <a href="index-3.html">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="index-4.html">Store</a>
-                        </li>
-                        <li>
-                            <a href="index-4.html">Support us</a>
-                        </li>
-                        <li>
-                            <a href="index-4.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="navbar-header">
-                        <h1 class="navbar-brand">
-                            <a href="./">
-                                <small>
-                                    exhibition islam
-                                </small>
-                            </a>
-
-                        </h1>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 ins6">
-                    <h6>
-                        Newsletter
-                    </h6>
-                    <form class='rd-mailform subscribe' method="post" action="bat/rd-mailform.php">
-                        <!-- RD Mailform Type -->
-                        <input type="hidden" name="form-type" value="subscribe" />
-                        <!-- END RD Mailform Type -->
-                        <div class="form-group">
-                            <label class="form-label" data-add-placeholder for="mailform-input-email">E-mail</label>
-                            <input id="mailform-input-email"
-                                   type="text"
-                                   name="email"
-                                   data-constraints="@NotEmpty @Email" />
-                        </div>
-                        <div class="form-group btn-wr">
-                            <button class="fa-angle-right" type="submit"></button>
-                            <div class="mfInfo"></div>
-                        </div>
-                    </form>
-                    <ul class="inline-list">
-                        <li>
-                            <a href="#" class="fa fa-facebook">facebook</a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-twitter">twitter</a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa  fa-google-plus">google-plus</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="well12">
-            <div class="container-fluid text-center">
-                <p class="rights">
-                    Exhibition Islam&#169; <span id="copyright-year"></span>
-                    <a href="index-5.html">Privacy Policy</a>
-
-                </p>
-            </div>
-        </section>
-
-    </footer>
+    <content-footer></content-footer>
 </div>

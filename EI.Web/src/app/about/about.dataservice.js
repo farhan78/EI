@@ -16,7 +16,9 @@
         var service = {
             getNews: getNews,
             getReports: getReports,
-            getEvents: getEvents
+            getEvents: getEvents,
+            getQuotes: getQuotes,
+            getRandomQuote: getRandomQuote
         };
 
         return service;
@@ -28,7 +30,7 @@
             //}
 
             return $http({
-                url: '../api/news/',
+                url: '../api/news/get',
                 method: 'GET'
             })
                 .then(success)
@@ -45,12 +47,8 @@
 
         function getReports() {
 
-            //if (promiseCache['events']) {
-            //    return promiseCache['events']
-            //}
-
             return $http({
-                url: '../api/reports/',
+                url: '../api/reports/get',
                 method: 'GET'
             })
                 .then(success)
@@ -71,7 +69,7 @@
             //}
 
             return $http({
-                url: '../api/events/list',
+                url: '../api/events/get',
                 method: 'GET'
             })
                 .then(success)
@@ -86,6 +84,45 @@
             }
         }
 
+        function getQuotes() {
+
+            //if (promiseCache['events']) {
+            //    return promiseCache['events']
+            //}
+
+            return $http({
+                url: '../api/quotes/get',
+                method: 'GET'
+            })
+                .then(success)
+                .catch(fail);
+
+            function success(response) {
+                return response.data;
+            }
+
+            function fail(e) {
+                return exception.catcher('XHR Failed for getQuotes')(e);
+            }
+        }
+
+        function getRandomQuote() {
+
+            return $http({
+                url: '../api/quotes/getrandom',
+                method: 'GET'
+            })
+                .then(success)
+                .catch(fail);
+
+            function success(response) {
+                return response.data;
+            }
+
+            function fail(e) {
+                return exception.catcher('XHR Failed for getRandom')(e);
+            }
+        }
 
     }
 })();

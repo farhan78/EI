@@ -1,4 +1,4 @@
-﻿<header class="header-1">
+﻿<header class="header-1" style="background-color:#FFFFE6">
     <div id="stuck_container" class="stuck_container">
         <div class="container">
             <div class="navbar-header">
@@ -27,7 +27,10 @@
                                 <a ui-sref="content.about.events">Events</a>
                             </li>
                             <li>
-                                <a ui-sref="content.about.news">In the News</a>
+                                <a ui-sref="content.about.news">News</a>
+                            </li>
+                            <li>
+                                <a ui-sref="content.about.testimonials">Testimonials</a>
                             </li>
                         </ul>
                     </li>
@@ -78,7 +81,7 @@
                                 <a href="#">Posters</a>
                             </li>
                             <li>
-                                <a href="#">Leaflets</a>
+                                <a ui-sref="content.store.leaflets">Leaflets</a>
                             </li>
                             <li>
                                 <a href="#">Stock Photos</a>
@@ -91,11 +94,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="index-4.html">Support Us</a>
+                    <li ui-sref-active="active">
+                        <a ui-sref="content.support">Support Us</a>
                     </li>
-                    <li>
-                        <a href="index-4.html">Contact</a>
+                    <li ui-sref-active="active">
+                        <a ui-sref="content.contact">Contact</a>
                     </li>
                     <li class="dropdown" ui-sref-active="active" ng-if="vm.basket.length > 0">
                         <a usref="" class="btn btn-xs btn-responsive"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge tiny-margin-left tiny-margin-bottom">{{vm.totalItems}}</span></a>

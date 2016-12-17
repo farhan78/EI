@@ -21,6 +21,9 @@ namespace EI.Web.Infrastructure.Core
         protected IEntityBaseRepository<News> _newsRepository;
         protected IEntityBaseRepository<Report> _reportsRepository;
         protected IEntityBaseRepository<Book> _booksRepository;
+        protected IEntityBaseRepository<Leaflet> _leafletsRepository;
+        protected IEntityBaseRepository<LeafletCategory> _leafletCategoriesRepository;
+        protected IEntityBaseRepository<Quote> _quotesRepository;
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
         protected IEntityBaseRepository<Error> _errorsRepository;
         protected IUnitOfWork _unitOfWork;
@@ -85,6 +88,22 @@ namespace EI.Web.Infrastructure.Core
             {
                 _booksRepository = _dataRepositoryFactory.GetDataRepository<Book>(RequestMessage);
             }
+
+            if (entities.Any(e => e.FullName == typeof(Quote).FullName))
+            {
+                _quotesRepository = _dataRepositoryFactory.GetDataRepository<Quote>(RequestMessage);
+            }
+
+            if (entities.Any(e => e.FullName == typeof(Leaflet).FullName))
+            {
+                _leafletsRepository = _dataRepositoryFactory.GetDataRepository<Leaflet>(RequestMessage);
+            }
+
+            if (entities.Any(e => e.FullName == typeof(LeafletCategory).FullName))
+            {
+                _leafletCategoriesRepository = _dataRepositoryFactory.GetDataRepository<LeafletCategory>(RequestMessage);
+            }
+
         }
 
         private void LogError(Exception ex)

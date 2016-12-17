@@ -66,6 +66,15 @@
                         controller: 'EventListController',
                         controllerAs: 'vm',
                     }
+                },
+                {
+                    state: 'content.about.testimonials',
+                    config: {
+                        url: '/testimonials',
+                        templateUrl: 'app/about/testimonials.html',
+                        controller: 'TestimonialsController',
+                        controllerAs: 'vm',
+                    }
                 }
         ];
     }

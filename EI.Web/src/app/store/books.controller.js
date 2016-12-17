@@ -5,9 +5,9 @@
       .module('app.store')
       .controller('BooksController', BooksController);
 
-    BooksController.$inject = ['$scope', '$q', 'config', 'logger', 'storeDataService','$state', '$stateParams', '$anchorScroll'];
+    BooksController.$inject = ['$rootScope', '$q', 'config', 'logger', 'storeDataService', '$state', '$stateParams', '$anchorScroll'];
     /* @ngInject */
-    function BooksController($scope, $q, config, logger, storeDataService, $state, $stateParams, $anchorScroll) {
+    function BooksController($rootScope, $q, config, logger, storeDataService, $state, $stateParams, $anchorScroll) {
 
         var vm = this;
         vm.books = [];
@@ -23,8 +23,8 @@
 
         activate();
         function activate() {
-            $anchorScroll($('#mainContentDiv'));
 
+            $anchorScroll($('#mainContentDiv'));
             var promises = [];
             var params = $stateParams.params;
             promises.push(getBooks());
@@ -37,7 +37,7 @@
         }
 
         function getBooks() {
-          
+
             return storeDataService.getBooks()
                 .then(function (data) {
                     vm.books = data;
@@ -46,11 +46,11 @@
         }
 
         function addToBasket(book, type) {
-         
+
             return storeDataService.addToBasket(book, type)
                 .then(function (data) {
                     logger.success("Added to Basket", null, null);
-                   
+
                     // Then go to that state (closing child view)
                     $state.reload();
 

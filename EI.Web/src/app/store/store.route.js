@@ -47,6 +47,30 @@
                      }
                  },
                  {
+                     state: 'content.store.leaflets',
+                     config: {
+                         url: '/leaflets',
+                         templateUrl: 'app/store/leaflets.html',
+                         controller: 'LeafletsController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.leaflet-detail',
+                     config: {
+                         url: '/leaflet-detail',
+                         templateUrl: 'app/store/leaflet-detail.html',
+                         controller: 'LeafletDetailController',
+                         controllerAs: 'vm',
+                         params: {
+                             leaflet: {
+                                 value: null,
+                                 squash: true,
+                             }
+                         }
+                     }
+                 },
+                 {
                       state: 'content.store.basket',
                       config: {
                           url: '/shopping-basket',

@@ -2,14 +2,14 @@
 <section class="well13">
     <div class="container">
         <div>
-            <a  class="link" ui-sref="content.store.books"><span class="glyphicon glyphicon-backward"></span> Back to Publications</a>
+            <a class="link" ui-sref="content.store.books"><span class="glyphicon glyphicon-backward"></span> Back to Publications</a>
             <hr />
         </div>
 
         <div class="col-xs-12 list-div">
             <div class="row box-shadow">
                 <div class="col-xs-3 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
-                    <img class="img-responsive small-margin-top small-margin-bottom" src="images/news/3_30072009836.JPG">
+                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + vm.book.ImageUrl | encodeUri}}">
                 </div>
                 <div class="col-xs-8 col-sm-9">
                     <div class="list-item">
@@ -19,7 +19,7 @@
                             <p ng-if="vm.book.SpecialOfferPrice === 0 || vm.book.SpecialOfferPrice === vm.book.Price" class="list-sub-title small-margin-top">{{vm.book.Price | currency:"£"}}</p>
                         </div>
                         <p class="list-meta-data"><b>Availability</b>: {{vm.book.Availability}}</p>
-                        <button ng-if="vm.book.AvailableForPurchase===true" ng-click="vm.addToBasket(vm.book, 'vm.book')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
+                        <button ng-if="vm.book.AvailableForPurchase===true" ng-click="vm.addToBasket(vm.book, 'Book')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                             <span>Add to Basket</span>
                         </button>
