@@ -9,16 +9,20 @@
   /* @ngInject */
   function dataservice($http, $q, exception, logger) {
     var service = {
-      getPeople: getPeople,
-      getMessageCount: getMessageCount
+      submitEmail: submitEmail,
+    
     };
 
     return service;
 
-    function getMessageCount() { return $q.when(72); }
-
-    function getPeople() {
-      return $http.get('/api/people')
+    function submitEmail(email) {
+        return $http({
+            url: '../api/email/add',
+            method: 'POST',
+            params: {
+                email: email
+            }
+        })
         .then(success)
         .catch(fail);
 

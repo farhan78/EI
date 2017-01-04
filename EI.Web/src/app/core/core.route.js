@@ -30,30 +30,30 @@
                   controller: 'HomeController',
                   controllerAs: 'vm',
                   settings: {
-                      external:false
+                      external: false
                   },
                   title: 'home'
               }
           },
           {
-               state: 'content',
-               config: {
-                   //url: '',
-                   templateUrl: 'app/layout/content-shell.html',
-                   controller: 'ContentShellController',
-                   controllerAs: 'vm',
-                   title: 'content'
-               }
+              state: 'content',
+              config: {
+                  //url: '',
+                  templateUrl: 'app/layout/content-shell.html',
+                  controller: 'ContentShellController',
+                  controllerAs: 'vm',
+                  title: 'content'
+              }
           },
           {
-               state: 'gallery-viewer',
-               config: {
-                   url: '/gallery-viewer/:galleryType/:id',
-                   templateUrl: 'app/gallery/index.html',
-                   controller: 'GalleryController',
-                   controllerAs: 'vm',
-                   title: 'gallery'
-               }
+              state: 'gallery-viewer',
+              config: {
+                  url: '/gallery-viewer/:galleryType/:id',
+                  templateUrl: 'app/gallery/index.html',
+                  controller: 'GalleryController',
+                  controllerAs: 'vm',
+                  title: 'gallery'
+              }
           },
           {
               state: 'content.disclaimer',
@@ -90,7 +90,16 @@
                   controller: 'OtherController',
                   controllerAs: 'vm',
               }
-          }
+          },
+        {
+            state: 'content.coming-soon',
+            config: {
+                url: '/',
+                templateUrl: 'app/other/comingsoon.html',
+                controller: 'OtherController',
+                controllerAs: 'vm',
+            }
+        }
         ];
     }
 })();

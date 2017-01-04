@@ -8,8 +8,8 @@
 
         <div data-ng-repeat="leaflet in vm.leaflets.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
             <div class="row box-shadow">
-                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
-                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + leaflet.ImageUrl | encodeUri}}">
+                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile" style="padding-left:0px;">
+                    <img class="img-responsivem" ng-src="{{'src/' + leaflet.ImageUrl | encodeUri}}">
                 </div>
                 <div class="col-xs-9 col-sm-10">
                     <div class="list-item">

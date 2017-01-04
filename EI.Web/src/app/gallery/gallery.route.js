@@ -26,7 +26,7 @@
                      state: 'content.gallery.events',
                      config: {
                          url: '/events',
-                         templateUrl: 'app/gallery/events.html',
+                         templateUrl: 'app/other/comingsoon.html',
                          controller: 'EventsController',
                          controllerAs: 'vm'
                      }
@@ -35,7 +35,34 @@
                      state: 'content.gallery.posters',
                      config: {
                          url: '/posters',
-                         templateUrl: 'app/gallery/posters.html',
+                         templateUrl: 'app/other/comingsoon.html',
+                         controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.gallery.models',
+                     config: {
+                         url: '/models',
+                         templateUrl: 'app/other/comingsoon.html',
+                         controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.gallery.publications',
+                     config: {
+                         url: '/publications',
+                         templateUrl: 'app/other/comingsoon.html',
+                         controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.gallery.facebook',
+                     config: {
+                         url: '/facebook',
+                         templateUrl: 'app/other/comingsoon.html',
                          controller: 'PostersController',
                          controllerAs: 'vm',
                      }

@@ -19,11 +19,23 @@
             replace: true
         };
 
-        ContentFooterController.$inject = ['$scope'];
+        ContentFooterController.$inject = ['$scope', 'dataservice', 'logger'];
 
         /* @ngInject */
-        function ContentFooterController($scope) {
+        function ContentFooterController($scope, dataservice, logger) {
             var vm = this;
+            vm.email = null;
+            vm.submitEmail = submitEmail;
+
+            function submitEmail() {
+              
+                return dataservice.submitEmail(vm.email)
+                .then(function (data) {
+                    logger.success("Subscription successful", null, null);
+
+                });
+            }
+
             $scope.isCollapsed = true;
         }
 

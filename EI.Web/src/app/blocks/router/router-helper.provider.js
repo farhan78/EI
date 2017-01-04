@@ -61,6 +61,7 @@
             }
 
             function handleRoutingErrors() {
+              
                 // Route cancellation:
                 // On routing error, go to the dashboard.
                 // Provide an exit clause if it tries to do it twice.
@@ -78,6 +79,7 @@
                         (error.data || '') + '. <br/>' + (error.statusText || '') +
                         ': ' + (error.status || '');
                       logger.warning(msg, [toState]);
+                      debugger;
                       $location.path('/');
                   }
                 );

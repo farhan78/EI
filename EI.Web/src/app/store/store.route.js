@@ -8,7 +8,8 @@
     appRun.$inject = ['routerHelper'];
     /* @ngInject */
     function appRun(routerHelper) {
-        routerHelper.configureStates(getStates());
+        var otherwise = '/404';
+        routerHelper.configureStates(getStates(), otherwise);
     }
 
     function getStates() {
@@ -68,6 +69,42 @@
                                  squash: true,
                              }
                          }
+                     }
+                 },
+                 {
+                     state: 'content.store.posters',
+                     config: {
+                         url: '/posters',
+                         templateUrl: 'app/other/comingsoon.html',
+                         //controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.stock-photos',
+                     config: {
+                         url: '/stock-photos',
+                         templateUrl: 'app/other/comingsoon.html',
+                         //controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.hardware',
+                     config: {
+                         url: '/hardware',
+                         templateUrl: 'app/other/comingsoon.html',
+                         //controller: 'PostersController',
+                         controllerAs: 'vm',
+                     }
+                 },
+                 {
+                     state: 'content.store.free-downloads',
+                     config: {
+                         url: '/free-downloads',
+                         templateUrl: 'app/other/comingsoon.html',
+                         //controller: 'PostersController',
+                         controllerAs: 'vm',
                      }
                  },
                  {

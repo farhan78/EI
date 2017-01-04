@@ -1,4 +1,4 @@
-﻿<footer class="footer1">
+﻿<footer class="footer1" style="background-color:#343434;color:white">
     <section class="well14 center991">
         <div class="container">
             <div class="row">
@@ -7,15 +7,15 @@
                         <li>
                             <a ui-sref="home">Home</a>
                         </li>
-                        <li class="dropdown" ui-sref-active="active">
+                        <li class="dropdown">
                             <a class="dropdown-toggle" ui-sref="content.about.what-we-do">About</a>
 
                         </li>
-                        <li class="dropdown" ui-sref-active="active">
+                        <li class="dropdown">
                             <a ui-sref="content.services.exhibition-hire">Services</a>
 
                         </li>
-                        <li class="dropdown" ui-sref-active="active">
+                        <li class="dropdown">
                             <a ui-sref="content.gallery.events">Gallery</a>
 
                         </li>
@@ -35,20 +35,20 @@
                 </div>
 
                 <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-                    <h6>
+                    <h6 style="color:white">
                         Newsletter
                     </h6>
 
-                    <form class='rd-mailform subscribe' method="post" action="bat/rd-mailform.php">
+                    <form class='rd-mailform subscribe' ng-submit="vm.submitEmail()">
                         <!-- RD Mailform Type -->
                         <input type="hidden" name="form-type" value="subscribe" />
                         <!-- END RD Mailform Type -->
                         <div class="form-group">
-                            <label class="form-label" data-add-placeholder for="mailform-input-email">E-mail</label>
+                            <label class="form-label"></label>
                             <input id="mailform-input-email"
-                                   type="text"
+                                   type="email"
                                    name="email"
-                                   data-constraints="@NotEmpty @Email" />
+                                    placeholder="Email" ng-model="vm.email" required />
                         </div>
                         <div class="form-group btn-wr">
                             <button class="fa-angle-right" type="submit"></button>
@@ -65,7 +65,7 @@
                 <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                     <p class="rights">
                         Exhibition Islam &#169; <span id="copyright-year"></span>
-                        <a class="link" ui-sref="content.privacy-policy">Terms and Conditions</a>
+                        <a ui-sref="content.privacy-policy">Terms and Conditions</a>
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
@@ -78,6 +78,9 @@
                         </li>
                         <li>
                             <a href="#" class="fa  fa-google-plus">google-plus</a>
+                        </li>
+                        <li style="padding-left:5px">
+                            <a href="#" class="fa  fa-linkedin">linkedIn</a>
                         </li>
                     </ul>
                 </div>

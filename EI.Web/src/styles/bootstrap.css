@@ -1422,7 +1422,7 @@ th {
 .toTop {
     width: 50px;
     height: 50px;
-    background: #692b33;
+    background: #A67B08;
     border-radius: 50%;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -2596,6 +2596,11 @@ footer.footer1 {
     footer.footer1 .rights {
         margin-top: 9px;
     }
+
+footer ul li a:hover, footer a:hover {
+     text-decoration: underline;
+     color:white !important;
+}
 
 h1,
 h2,

@@ -255,9 +255,9 @@
     <Content Include="build\images\page-1_img10_original.jpg" />
     <Content Include="build\images\reports\1_r1.jpg" />
     <Content Include="build\images\services.jpg" />
-    <Content Include="build\js\app-b52ed66b4d.js" />
+    <Content Include="build\js\app-94466c2aca.js" />
     <Content Include="build\js\lib-3608783ae2.js" />
-    <Content Include="build\styles\custom-15dab742a3.css" />
+    <Content Include="build\styles\custom-d0318e93b8.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />
     <Content Include="Content\css\blank.gif" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -293,6 +293,7 @@
     <Content Include="src\app\about\reports.controller.js" />
     <Content Include="src\app\about\reports.html" />
     <Content Include="src\app\about\testimonials.controller.js" />
+    <Content Include="src\app\other\comingsoon.html" />
     <Content Include="src\app\other\contact.html" />
     <Content Include="src\app\other\privacy-policy.html" />
     <Content Include="src\app\other\disclaimer.html" />
@@ -481,6 +482,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\BasketController.cs" />
     <Compile Include="Controllers\LeafletsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
@@ -559,6 +561,7 @@
     <Content Include="build\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="build\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="build\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="build\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\EI.pubxml" />
     <Content Include="src\fonts\fontawesome-webfont.eot" />
     <Content Include="src\fonts\fontawesome-webfont.ttf" />
