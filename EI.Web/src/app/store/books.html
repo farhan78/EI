@@ -19,7 +19,7 @@
                         <p class="list-meta-data"><b>Date of Publish</b>: {{book.PublishDate | date : 'dd MMM yyyy'}}</p>
                         <p class="list-meta-data"><b>Availability</b>: {{book.Availability}}</p>
                         <div ng-if="book.Price > 0 || book.SpecialOfferPrice > 0">
-                            <p ng-if="book.SpecialOfferPrice > 0 && book.SpecialOfferPrice < book.Price" class="list-sub-title small-margin-top">{{book.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{book.Price | currency:"£"}}</strike> ({{book.DiscountPercent}}% off)</span></p>
+                            <p ng-if="book.SpecialOfferPrice > 0 && book.SpecialOfferPrice < book.Price" class="list-sub-title small-margin-top">{{book.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{book.Price | currency:"£"}}</strike>&nbsp;({{book.DiscountPercent}}% off)</span></p>
                             <p ng-if="book.SpecialOfferPrice === 0 || book.SpecialOfferPrice === book.Price" class="list-sub-title small-margin-top">{{book.Price | currency:"£"}}</p>
                         </div>
                         <button ng-if="book.AvailableForPurchase===true" ng-click="vm.addToBasket(book, 'Book')" class="btn btn-primary btn-sm btn-responsive small-margin-top">

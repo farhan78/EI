@@ -210,6 +210,7 @@
     <Content Include="build\gallery\posters\10\thumbs\Header - Copy.jpg" />
     <Content Include="build\gallery\posters\10\thumbs\Header.jpg" />
     <Content Include="build\images\about.jpg" />
+    <Content Include="build\images\about_x.jpg" />
     <Content Include="build\images\AngularJS-small.png" />
     <Content Include="build\images\busy.gif" />
     <Content Include="build\images\gulp-tiny.png" />
@@ -255,7 +256,7 @@
     <Content Include="build\images\page-1_img10_original.jpg" />
     <Content Include="build\images\reports\1_r1.jpg" />
     <Content Include="build\images\services.jpg" />
-    <Content Include="build\js\app-94466c2aca.js" />
+    <Content Include="build\js\app-81833afe07.js" />
     <Content Include="build\js\lib-3608783ae2.js" />
     <Content Include="build\styles\custom-d0318e93b8.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />

@@ -20,7 +20,7 @@
                         <p class="list-meta-data"><b>Date of Publish</b>: {{leaflet.PublishDate | date : 'dd MMM yyyy'}}</p>
                         <p class="list-meta-data"><b>Availability</b>: {{leaflet.Availability}}</p>
                         <div ng-if="leaflet.Price > 0 || leaflet.SpecialOfferPrice > 0">
-                            <p ng-if="leaflet.SpecialOfferPrice > 0 && leaflet.SpecialOfferPrice < leaflet.Price" class="list-sub-title small-margin-top">{{leaflet.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{leaflet.Price | currency:"£"}}</strike> ({{leaflet.DiscountPercent}}% off)</span></p>
+                            <p ng-if="leaflet.SpecialOfferPrice > 0 && leaflet.SpecialOfferPrice < leaflet.Price" class="list-sub-title small-margin-top">{{leaflet.SpecialOfferPrice | currency:"£"}} <span class="list-offer-price">List Price: <strike>{{leaflet.Price | currency:"£"}}</strike>&nbsp;({{leaflet.DiscountPercent}}% off)</span></p>
                             <p ng-if="leaflet.SpecialOfferPrice === 0 || leaflet.SpecialOfferPrice === leaflet.Price" class="list-sub-title small-margin-top">{{leaflet.Price | currency:"£"}}</p>
                         </div>
                         <button ng-click="vm.addToBasket(leaflet, 'Leaflet')" class="btn btn-primary btn-sm btn-responsive small-margin-top">
