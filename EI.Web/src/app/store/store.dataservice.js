@@ -16,6 +16,7 @@
         var service = {
             getBooks: getBooks,
             getLeaflets: getLeaflets,
+            getFreeDownloads: getFreeDownloads,
             addToBasket: addToBasket,
             getBasketContent: getBasketContent,
             updateQuantity: updateQuantity,
@@ -72,6 +73,30 @@
 
             function fail(e) {
                 return exception.catcher('XHR Failed for getBooks')(e);
+            }
+        }
+
+        function getFreeDownloads() {
+            if (promiseCache['free-downloads']) {
+                return promiseCache['free-downloads']
+            }
+
+            promiseCache['free-downloads'] = $http({
+                url: '../api/freeDownloads/get',
+                method: 'GET'
+            })
+                .then(success)
+                .catch(fail);
+
+            return promiseCache['free-downloads'];
+
+            function success(response) {
+
+                return response.data;
+            }
+
+            function fail(e) {
+                return exception.catcher('XHR Failed for getFreeDownloads')(e);
             }
         }
 

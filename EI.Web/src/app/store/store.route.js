@@ -102,8 +102,8 @@
                      state: 'content.store.free-downloads',
                      config: {
                          url: '/free-downloads',
-                         templateUrl: 'app/other/comingsoon.html',
-                         //controller: 'PostersController',
+                         templateUrl: 'app/store/free downloads.html',
+                         controller: 'FreeDownloadsController',
                          controllerAs: 'vm',
                      }
                  },

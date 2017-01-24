@@ -25,6 +25,7 @@ namespace EI.Web.Infrastructure.Mappings
             Mapper.CreateMap<Quote, QuoteViewModel>();
             Mapper.CreateMap<Leaflet, LeafletViewModel>()
                     .ForMember(l => l.CategoryName, opt => opt.MapFrom(s => s.LeafletCategory.Category));
+            Mapper.CreateMap<FreeDownload, FreeDownloadViewModel>();
         }
     }
 }

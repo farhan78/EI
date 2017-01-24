@@ -23,6 +23,7 @@ namespace EI.Web.Infrastructure.Core
         protected IEntityBaseRepository<Book> _booksRepository;
         protected IEntityBaseRepository<Leaflet> _leafletsRepository;
         protected IEntityBaseRepository<LeafletCategory> _leafletCategoriesRepository;
+        protected IEntityBaseRepository<FreeDownload> _freeDownloadRepository;
         protected IEntityBaseRepository<Quote> _quotesRepository;
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
         protected IEntityBaseRepository<Error> _errorsRepository;
@@ -104,6 +105,10 @@ namespace EI.Web.Infrastructure.Core
                 _leafletCategoriesRepository = _dataRepositoryFactory.GetDataRepository<LeafletCategory>(RequestMessage);
             }
 
+            if (entities.Any(e => e.FullName == typeof(FreeDownload).FullName))
+            {
+                _freeDownloadRepository = _dataRepositoryFactory.GetDataRepository<FreeDownload>(RequestMessage);
+            }
         }
 
         private void LogError(Exception ex)

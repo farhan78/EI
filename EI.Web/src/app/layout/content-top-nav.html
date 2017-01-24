@@ -38,7 +38,7 @@
                         <a ui-sref="content.services.exhibition-hire">Services</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a ui-sref="content.services.exhibition-hire">Exhibition Hire</a>
+                                <a ui-sref="content.services.exhibition-hire">Exhibition Booking</a>
                             </li>
                             <li>
                                 <a ui-sref="content.services.graphic-design">Graphic Design</a>
@@ -65,9 +65,6 @@
                             </li>
                             <li>
                                 <a ui-sref="content.gallery.publications">Publications</a>
-                            </li>
-                            <li>
-                                <a ui-sref="content.gallery.facebook">Facebook</a>
                             </li>
                         </ul>
                     </li>
@@ -101,15 +98,15 @@
                         <a ui-sref="content.contact">Contact</a>
                     </li>
                     <li class="dropdown" ui-sref-active="active" ng-if="vm.basket.length > 0">
-                        <a usref="" class="btn btn-xs btn-responsive"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge tiny-margin-left tiny-margin-bottom">{{vm.totalItems}}</span></a>
-                        <ul class="dropdown-menu">
+                        <a ui-sref="content.store.basket" class="btn btn-xs btn-responsive"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge tiny-margin-left tiny-margin-bottom">{{vm.totalItems}}</span></a>
+                        <!--<ul class="dropdown-menu">
                             <li>
                                 <a ui-sref="content.store.basket">View Basket</a>
                             </li>
                             <li>
                                 <a ui-sref="content.store.paypal-processing({invoice:vm.invoice})">Paypal Checkout</a>
                             </li>
-                        </ul>
+                        </ul>-->
                     </li>
                 </ul>
             </nav>

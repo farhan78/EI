@@ -1,0 +1,35 @@
+﻿
+<section class="well13">
+    <div id="free-downloads" class="container">
+        <h4 id="free-downloads" class="main-header">
+            Free Downloads
+            <hr />
+        </h4>
+
+        <div data-ng-repeat="fd in vm.freeDownloads.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-xs-12 list-div">
+
+            <div class="row box-shadow">
+                <div class="col-xs-2 col-xs-offset-1 col-sm-offset-0 list-image-mobile">
+                    <img class="img-responsive small-margin-top small-margin-bottom" ng-src="{{'src/' + fd.ImageUrl | encodeUri}}">
+                </div>
+                <div class="col-xs-9 col-sm-10">
+                    <div class="list-item">
+                        <p class="list-title">{{fd.Name}}</p>
+                        <p class="list-date">{{fd.DateSubmitted | date:'dd MMMM yyyy'}}</p>
+                        <p class="list-desc">{{fd.Description}}</p>
+                        <a href="{{'resources/' + fd.DownloadPath}}" class="btn btn-primary btn-sm btn-responsive small-margin-top" download>
+                            <span class="glyphicon glyphicon-download-alt"></span>
+                            <span>Download Resource</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="list-separator">
+        </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.freeDownloads.length > vm.maxSize"
+                        total-items="vm.freeDownloads.length" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+    </div>
+</section>
