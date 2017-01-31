@@ -20,6 +20,14 @@ namespace EI.Data
 
         #region Entity Sets
         public IDbSet<Event> EventSet { get; set; }
+        public IDbSet<Poster> PosterSet { get; set; }
+        public IDbSet<News> NewsSet { get; set; }
+        public IDbSet<Report> ReportSet { get; set; }
+        public IDbSet<Book> BookSet { get; set; }
+        public IDbSet<Leaflet> LeafletSet { get; set; }
+        public IDbSet<LeafletCategory> LeafletCategorySet { get; set; }
+        public IDbSet<FreeDownload> FreeDownloadSet { get; set; }
+        public IDbSet<Quote> QuoteSet { get; set; }
         public IDbSet<Error> ErrorSet { get; set; }
         #endregion
 
@@ -32,6 +40,23 @@ namespace EI.Data
             //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Configurations.Add(new EventConfiguration());
+            modelBuilder.Configurations.Add(new PosterConfiguration());
+            modelBuilder.Configurations.Add(new NewsConfiguration());
+            modelBuilder.Configurations.Add(new ReportConfiguration());
+            modelBuilder.Configurations.Add(new BookConfiguration());
+            modelBuilder.Configurations.Add(new QuoteConfiguration());
+            modelBuilder.Configurations.Add(new LeafletConfiguration());
+            modelBuilder.Configurations.Add(new FreeDownloadConfiguration());
+
+            modelBuilder.Entity<LeafletCategory>()
+                .HasKey(t => t.ID);
+
+            modelBuilder.Entity<Leaflet>()
+                .HasRequired(t => t.LeafletCategory)
+                .WithMany(d => d.Leaflets)
+                .HasForeignKey(d => d.CategoryID);
+
+
         }
     }
 }
