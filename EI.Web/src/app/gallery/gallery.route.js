@@ -31,6 +31,15 @@
                          controllerAs: 'vm'
                      }
                  },
+                  {
+                      state: 'content.gallery.eventsTemp',
+                      config: {
+                          url: '/eventsTemp',
+                          templateUrl: 'app/gallery/events.html',
+                          controller: 'EventsController',
+                          controllerAs: 'vm'
+                      }
+                  },
                  {
                      state: 'content.gallery.posters',
                      config: {

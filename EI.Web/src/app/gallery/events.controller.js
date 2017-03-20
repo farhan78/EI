@@ -5,17 +5,18 @@
       .module('app.gallery')
       .controller('EventsController', EventsController);
 
-    EventsController.$inject = ['$rootScope', '$q', '$timeout', 'config', 'logger',
-        '$stateParams', 'galleryDataService', '$anchorScroll'];
+    EventsController.$inject = ['$scope', '$q', '$timeout', 'config', 'logger',
+        '$stateParams', 'galleryDataService', '$anchorScroll','$filter'];
     /* @ngInject */
-    function EventsController($rootScope, $q, $timeout, config, logger,
-        $stateParams, galleryDataService, $anchorScroll) {
+    function EventsController($scope, $q, $timeout, config, logger,
+        $stateParams, galleryDataService, $anchorScroll, $filter) {
 
         var vm = this;
         vm.events = [];
+        vm.filteredEvents = [];
         vm.loading = true;
 
-        vm.maxSize = 18;
+        vm.maxSize = 20;
         vm.currentPage = 1;
         vm.totalItems = 0;
 
@@ -26,6 +27,7 @@
 
         function activate() {
             $anchorScroll($('#mainContentDiv'));
+            $scope.$watch('vm.search', searchChanged, true);
 
             var promises = [];
             var params = $stateParams.params;
@@ -33,7 +35,7 @@
 
             return $q.all(promises)
                 .then(function () {
-
+                    vm.filteredEvents = $filter('filter')(vm.events, vm.search);
                 });
         }
 
@@ -43,6 +45,11 @@
                     vm.events = data;
                     vm.loading = false;
                 });
+        }
+
+        function searchChanged() {
+          
+            vm.filteredEvents = $filter('filter')(vm.events, vm.search);
         }
 
         function goToTop() {

@@ -33,7 +33,8 @@
     "jquery-migrate": "1.2.1",
     "animate.css": "",
     "ngInfiniteScroll": "1.0.0",
-    "angular-encode-uri": "^1.0.0"
+    "angular-encode-uri": "^1.0.0",
+    "angular-ellipsis": "^0.1.7"
   },
   "resolutions": {
     "angular": "1.5.3"

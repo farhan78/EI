@@ -29,21 +29,14 @@ namespace EI.Web.Controllers
 
         [AllowAnonymous]
         [Route("gallery")]
-        public HttpResponseMessage Get(HttpRequestMessage request, int after)
+        public HttpResponseMessage GetGallery(HttpRequestMessage request)
         {
             List<Event> events;
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
 
-                if (after != 0)
-                {
-                    events = _eventsRepository.FindBy(e => e.HasAlbum && e.ID < after).OrderByDescending(m => m.ID).Take(9).ToList();
-                }
-                else
-                {
-                    events = _eventsRepository.FindBy(e => e.HasAlbum).OrderByDescending(m => m.ID).Take(9).ToList();
-                }
+                events = _eventsRepository.FindBy(e => e.HasAlbum).OrderByDescending(m => m.ID).ToList();
 
                 IEnumerable<EventViewModel> eventsVM = Mapper.Map<IEnumerable<Event>, IEnumerable<EventViewModel>>(events);
 

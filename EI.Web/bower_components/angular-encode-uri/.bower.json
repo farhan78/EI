@@ -24,6 +24,6 @@
     "commit": "68f1a2af1b8b793782ae2df790e1636e1e3d230c"
   },
   "_source": "https://github.com/rubenv/angular-encode-uri.git",
-  "_target": "~1.0.0",
+  "_target": "^1.0.0",
   "_originalSource": "angular-encode-uri"
 }

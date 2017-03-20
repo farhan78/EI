@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NewDataSet galleryTitle="86"
+	useThumbDots="false"
+	useFullscreenExpand="true"
+	showAutoPlayButton="true"
+	showInfoButton="true"
+	showDownloadButton="true"
+	showNavButtons="true"
+	showEmailButton="true"
+	showImageNumber="false"
+	backgroundUrl="www.exhibitionislam.com"
+	backgroundScale="FILL"
+	shareFacebook="true"
+	shareTwitter="false"
+	shareUrl="https://www.facebook.com/Exhibition-Islam-8418517249/?ref=aymt_homepage_panel"
+	backButtonUseIcon="true"
+
+>
+  <xs:schema id="NewDataSet"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet"
+	msdata:IsDataSet="true"
+	msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0"
+	maxOccurs="unbounded">
+          <xs:element name="image">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="url"
+	type="xs:string"
+	minOccurs="0"/>
+                <xs:element name="id"
+	msdata:AutoIncrement="true"
+	type="xs:int"/>
+                <xs:element name="title"
+	type="xs:string"
+	minOccurs="0"/>
+                <xs:element name="description"
+	type="xs:string"
+	minOccurs="0"/>
+                <xs:element name="date"
+	type="xs:string"
+	minOccurs="0"/>
+                <xs:element name="size"
+	type="xs:string"
+	minOccurs="0"/>
+                <xs:element name="width"
+	type="xs:int"
+	minOccurs="0"/>
+                <xs:element name="height"
+	type="xs:int"
+	minOccurs="0"/>
+                <xs:element name="t_width"
+	type="xs:int"
+	minOccurs="0"/>
+                <xs:element name="t_height"
+	type="xs:int"
+	minOccurs="0"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1"
+	msdata:PrimaryKey="true">
+        <xs:selector xpath=".//image"/>
+        <xs:field xpath="id"/>
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <image imageURL="images/1.jpg"
+	thumbURL="thumbs/1.jpg"
+	linkURL="images/1.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\1.jpg">
+    <title><![CDATA[1]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/2.jpg"
+	thumbURL="thumbs/2.jpg"
+	linkURL="images/2.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\2.jpg">
+    <title><![CDATA[2]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/3.jpg"
+	thumbURL="thumbs/3.jpg"
+	linkURL="images/3.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\3.jpg">
+    <title><![CDATA[3]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/4.jpg"
+	thumbURL="thumbs/4.jpg"
+	linkURL="images/4.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\4.jpg">
+    <title><![CDATA[4]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/5.jpg"
+	thumbURL="thumbs/5.jpg"
+	linkURL="images/5.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\5.jpg">
+    <title><![CDATA[5]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/6.jpg"
+	thumbURL="thumbs/6.jpg"
+	linkURL="images/6.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\6.jpg">
+    <title><![CDATA[6]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/7.jpg"
+	thumbURL="thumbs/7.jpg"
+	linkURL="images/7.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\7.jpg">
+    <title><![CDATA[7]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/8.jpg"
+	thumbURL="thumbs/8.jpg"
+	linkURL="images/8.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\8.jpg">
+    <title><![CDATA[8]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/9.jpg"
+	thumbURL="thumbs/9.jpg"
+	linkURL="images/9.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\9.jpg">
+    <title><![CDATA[9]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/10.jpg"
+	thumbURL="thumbs/10.jpg"
+	linkURL="images/10.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Sony\Desktop\Exhibition Islam 2011latest\Website EI NEW\gallery\86\10.jpg">
+    <title><![CDATA[10]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</NewDataSet>

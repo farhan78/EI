@@ -178,21 +178,6 @@
     <Content Include=".bowerrc" />
     <Content Include="build\fonts\fontawesome-webfont.svg" />
     <Content Include="build\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="build\gallery\events\470\Header.jpg" />
-    <Content Include="build\gallery\events\471\Header.jpg" />
-    <Content Include="build\gallery\events\475\Header.jpg" />
-    <Content Include="build\gallery\events\479\Header.jpg" />
-    <Content Include="build\gallery\events\481\Header.jpg" />
-    <Content Include="build\gallery\events\483\config.xml" />
-    <Content Include="build\gallery\events\483\Header.jpg" />
-    <Content Include="build\gallery\events\483\images\Header - Copy %282%29.jpg" />
-    <Content Include="build\gallery\events\483\images\Header - Copy %283%29.jpg" />
-    <Content Include="build\gallery\events\483\images\Header - Copy.jpg" />
-    <Content Include="build\gallery\events\483\images\Header.jpg" />
-    <Content Include="build\gallery\events\483\thumbs\Header - Copy %282%29.jpg" />
-    <Content Include="build\gallery\events\483\thumbs\Header - Copy %283%29.jpg" />
-    <Content Include="build\gallery\events\483\thumbs\Header - Copy.jpg" />
-    <Content Include="build\gallery\events\483\thumbs\Header.jpg" />
     <Content Include="build\gallery\jbcore\classic\fonts\juicebox.svg" />
     <Content Include="build\gallery\jbcore\classic\img\jb001.png" />
     <Content Include="build\gallery\jbcore\classic\img\spinner.gif" />
@@ -213,6 +198,9 @@
     <Content Include="build\images\about_x.jpg" />
     <Content Include="build\images\AngularJS-small.png" />
     <Content Include="build\images\busy.gif" />
+    <Content Include="build\images\contact2.jpg" />
+    <Content Include="build\images\Explore_Islam.jpg" />
+    <Content Include="build\images\gold_1.jpg" />
     <Content Include="build\images\gulp-tiny.png" />
     <Content Include="build\images\home.jpg" />
     <Content Include="build\images\icon.png" />
@@ -254,11 +242,17 @@
     <Content Include="build\images\page-1_img09.jpg" />
     <Content Include="build\images\page-1_img10.jpg" />
     <Content Include="build\images\page-1_img10_original.jpg" />
+    <Content Include="build\images\paypal.gif" />
+    <Content Include="build\images\paypal.png" />
+    <Content Include="build\images\paypal_checkout.png" />
+    <Content Include="build\images\placeholder.jpg" />
     <Content Include="build\images\reports\1_r1.jpg" />
     <Content Include="build\images\services.jpg" />
-    <Content Include="build\js\app-f615b1ad0b.js" />
-    <Content Include="build\js\lib-3608783ae2.js" />
-    <Content Include="build\styles\custom-6520bc9c97.css" />
+    <Content Include="build\images\services2.jpg" />
+    <Content Include="build\images\support.jpg" />
+    <Content Include="build\js\app-d08133540a.js" />
+    <Content Include="build\js\lib-635b6eb874.js" />
+    <Content Include="build\styles\custom-074d1824e6.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />
     <Content Include="Content\css\blank.gif" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -375,7 +369,6 @@
     <Content Include="src\app\widgets\widgets.module.js" />
     <Content Include="src\fonts\fontawesome-webfont.svg" />
     <Content Include="src\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="src\gallery\events\470\Header.jpg" />
     <Content Include="src\gallery\events\471\Header.jpg" />
     <Content Include="src\gallery\events\475\Header.jpg" />
     <Content Include="src\gallery\events\479\Header.jpg" />
@@ -390,6 +383,7 @@
     <Content Include="src\gallery\events\483\thumbs\Header - Copy %283%29.jpg" />
     <Content Include="src\gallery\events\483\thumbs\Header - Copy.jpg" />
     <Content Include="src\gallery\events\483\thumbs\Header.jpg" />
+    <Content Include="src\gallery\events\86\HEADER.jpg" />
     <Content Include="src\gallery\jbcore\classic\fonts\juicebox.svg" />
     <Content Include="src\gallery\jbcore\classic\img\jb001.png" />
     <Content Include="src\gallery\jbcore\classic\img\spinner.gif" />
@@ -398,10 +392,12 @@
     <Content Include="src\gallery\jbcore\juicebox.js" />
     <Content Include="src\gallery\posters\10\Header.jpg" />
     <Content Include="src\images\about.jpg" />
+    <Content Include="src\images\about_x.jpg" />
     <Content Include="src\images\AngularJS-small.png" />
     <Content Include="src\images\busy.gif" />
     <Content Include="src\images\contact2.jpg" />
     <Content Include="src\images\Explore_Islam.jpg" />
+    <Content Include="src\images\gold_1.jpg" />
     <Content Include="src\images\gulp-tiny.png" />
     <Content Include="src\images\home.jpg" />
     <Content Include="src\images\icon.png" />
@@ -447,6 +443,7 @@
     <Content Include="src\images\paypal.gif" />
     <Content Include="src\images\paypal.png" />
     <Content Include="src\images\paypal_checkout.png" />
+    <Content Include="src\images\placeholder.jpg" />
     <Content Include="src\images\services.jpg" />
     <Content Include="src\images\services2.jpg" />
     <Content Include="src\images\support.jpg" />
@@ -591,8 +588,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="build\gallery\events\" />
     <Folder Include="build\resources\freeDownloads\" />
     <Folder Include="src\css\" />
+    <Folder Include="src\gallery\events\470\" />
     <Folder Include="src\images\freeDownloads\" />
     <Folder Include="src\images\reports\" />
     <Folder Include="src\resources\freeDownloads\" />

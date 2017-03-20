@@ -7,6 +7,6 @@
       'blocks.exception', 'blocks.logger', 'blocks.router',
       'ui.router', 'ngplus', 'angular-include-replace',
       'ui.bootstrap', 'ngAnimate', 'infinite-scroll',
-      'rt.encodeuri'
+      'rt.encodeuri','dibari.angular-ellipsis'
     ]);
 })();

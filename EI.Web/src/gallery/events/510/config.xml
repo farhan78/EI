@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	useThumbDots="false"
+	useFullscreenExpand="false"
+	showAudioButton="false"
+	showInfoButton="true"
+	showDownloadButton="false"
+	showNavButtons="true"
+
+>
+  <image imageURL="images/20160705_084359.jpg"
+	thumbURL="thumbs/20160705_084359.jpg"
+	linkURL="images/20160705_084359.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\car photos\20160705_084359.jpg">
+    <title><![CDATA[20160705_084359]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/20160705_084404.jpg"
+	thumbURL="thumbs/20160705_084404.jpg"
+	linkURL="images/20160705_084404.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\car photos\20160705_084404.jpg">
+    <title><![CDATA[20160705_084404]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/20160705_084409.jpg"
+	thumbURL="thumbs/20160705_084409.jpg"
+	linkURL="images/20160705_084409.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\car photos\20160705_084409.jpg">
+    <title><![CDATA[20160705_084409]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/20160705_084423.jpg"
+	thumbURL="thumbs/20160705_084423.jpg"
+	linkURL="images/20160705_084423.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\car photos\20160705_084423.jpg">
+    <title><![CDATA[20160705_084423]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/20160705_085527.jpg"
+	thumbURL="thumbs/20160705_085527.jpg"
+	linkURL="images/20160705_085527.jpg"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Farhan\Desktop\car photos\20160705_085527.jpg">
+    <title><![CDATA[20160705_085527]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</juiceboxgallery>

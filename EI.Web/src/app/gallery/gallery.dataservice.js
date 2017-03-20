@@ -27,9 +27,8 @@
             //}
          
             return $http({
-                    url: '../api/events/get',
-                    method: 'GET',
-                    params: { after: after }
+                    url: '../api/events/getGallery',
+                    method: 'GET'
                 })
                 .then(success)
                 .catch(fail);
