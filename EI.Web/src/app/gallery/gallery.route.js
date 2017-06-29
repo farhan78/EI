@@ -26,20 +26,11 @@
                      state: 'content.gallery.events',
                      config: {
                          url: '/events',
-                         templateUrl: 'app/other/comingsoon.html',
+                         templateUrl: 'app/gallery/events.html',
                          controller: 'EventsController',
                          controllerAs: 'vm'
                      }
                  },
-                  {
-                      state: 'content.gallery.eventsTemp',
-                      config: {
-                          url: '/eventsTemp',
-                          templateUrl: 'app/gallery/events.html',
-                          controller: 'EventsController',
-                          controllerAs: 'vm'
-                      }
-                  },
                  {
                      state: 'content.gallery.posters',
                      config: {
