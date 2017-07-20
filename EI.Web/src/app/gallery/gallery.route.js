@@ -35,7 +35,7 @@
                      state: 'content.gallery.posters',
                      config: {
                          url: '/posters',
-                         templateUrl: 'app/other/comingsoon.html',
+                         templateUrl: 'app/gallery/posters.html',
                          controller: 'PostersController',
                          controllerAs: 'vm',
                      }

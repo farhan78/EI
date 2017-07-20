@@ -29,21 +29,14 @@ namespace EI.Web.Controllers
 
         [AllowAnonymous]
         [Route("latest")]
-        public HttpResponseMessage Get(HttpRequestMessage request, int after)
+        public HttpResponseMessage Get(HttpRequestMessage request)
         {
             List<Poster> posters;
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
 
-                if (after != 0)
-                {
-                    posters = _postersRepository.FindBy(e => e.ID < after).OrderByDescending(m => m.ID).Take(9).ToList();
-                }
-                else
-                {
-                    posters = _postersRepository.GetAll().OrderByDescending(m => m.ID).Take(9).ToList();
-                }
+                posters = _postersRepository.GetAll().OrderByDescending(m => m.ID).ToList();
 
                 IEnumerable<PosterViewModel> postersVM = Mapper.Map<IEnumerable<Poster>, IEnumerable<PosterViewModel>>(posters);
 
