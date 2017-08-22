@@ -1,0 +1,34 @@
+﻿<section class="well3">
+    <div class="container">
+        <h4 style="font-size:20px;" class="mid-margin-top">
+            Models
+            <hr />
+        </h4>
+        <input type="text" class="form-control small-margin-top mid-margin-bottom" style="width:300px;" placeholder="Search for model galleries..." ng-model="vm.search" />
+        <div class="row">
+            <div data-ng-repeat="model in vm.filteredModels.slice(((vm.currentPage-1)*vm.maxSize),((vm.currentPage)*vm.maxSize))" class="col-md-3 col-sm-4 col-xs-12 mid-margin-bottom">
+                <div class="card">
+                    <div class="card-image">
+                        <img class="img-responsive" src="gallery/models/{{model.ID}}/header.jpg">
+
+                    </div>
+                    <div class="card-title">
+                        <a ui-sref="gallery-viewer({galleryType:'models', id:'{{model.ID}}'})" class="link">
+                            <p data-ng-bind="model.Name" data-ellipsis></p>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{model.Description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fa fa-spinner fa-spin col-xs-offset-6" style="font-size:50px" ng-show="vm.loading"></div>
+        <uib-pagination class="pagination-lg" boundary-links="true" ng-show="vm.filteredModels.length > vm.maxSize"
+                        total-items="vm.filteredModels.length" items-per-page="vm.maxSize" ng-change="vm.goToTop()" ng-model="vm.currentPage" max-size="vm.maxSize"
+                        previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></uib-pagination>
+
+
+    </div>
+
+</section>

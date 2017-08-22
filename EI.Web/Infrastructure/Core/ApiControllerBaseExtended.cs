@@ -25,6 +25,7 @@ namespace EI.Web.Infrastructure.Core
         protected IEntityBaseRepository<LeafletCategory> _leafletCategoriesRepository;
         protected IEntityBaseRepository<FreeDownload> _freeDownloadRepository;
         protected IEntityBaseRepository<Quote> _quotesRepository;
+        protected IEntityBaseRepository<Model> _modelsRepository;
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
         protected IEntityBaseRepository<Error> _errorsRepository;
         protected IUnitOfWork _unitOfWork;
@@ -108,6 +109,11 @@ namespace EI.Web.Infrastructure.Core
             if (entities.Any(e => e.FullName == typeof(FreeDownload).FullName))
             {
                 _freeDownloadRepository = _dataRepositoryFactory.GetDataRepository<FreeDownload>(RequestMessage);
+            }
+
+            if (entities.Any(e => e.FullName == typeof(Model).FullName))
+            {
+                _modelsRepository = _dataRepositoryFactory.GetDataRepository<Model>(RequestMessage);
             }
         }
 

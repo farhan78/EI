@@ -250,7 +250,7 @@
     <Content Include="build\images\services.jpg" />
     <Content Include="build\images\services2.jpg" />
     <Content Include="build\images\support.jpg" />
-    <Content Include="build\js\app-9869a9d056.js" />
+    <Content Include="build\js\app-0859b0a91b.js" />
     <Content Include="build\js\lib-635b6eb874.js" />
     <Content Include="build\styles\custom-074d1824e6.css" />
     <Content Include="build\styles\lib-4c0781ad34.css" />
@@ -288,6 +288,8 @@
     <Content Include="src\app\about\reports.controller.js" />
     <Content Include="src\app\about\reports.html" />
     <Content Include="src\app\about\testimonials.controller.js" />
+    <Content Include="src\app\gallery\models.controller.js" />
+    <Content Include="src\app\gallery\models.html" />
     <Content Include="src\app\other\comingsoon.html" />
     <Content Include="src\app\other\contact.html" />
     <Content Include="src\app\other\privacy-policy.html" />
@@ -490,6 +492,7 @@
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\FreeDownloadsController.cs" />
+    <Compile Include="Controllers\ModelsController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PostersController.cs" />
     <Compile Include="Controllers\QuotesController.cs" />
@@ -514,6 +517,7 @@
     <Compile Include="Infrastructure\Validators\BookViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\EventViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\FreeDownloadViewModelValidator.cs" />
+    <Compile Include="Infrastructure\Validators\ModelViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\NewsViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\PosterViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\QuoteViewModelValidator.cs" />
@@ -522,6 +526,7 @@
     <Compile Include="Models\BookViewModel.cs" />
     <Compile Include="Models\EventViewModel.cs" />
     <Compile Include="Models\FreeDownloadViewModel.cs" />
+    <Compile Include="Models\ModelViewModel.cs" />
     <Compile Include="Models\NewsViewModel.cs" />
     <Compile Include="Models\PosterViewModel.cs" />
     <Compile Include="Models\QuoteViewModel.cs" />
@@ -565,7 +570,6 @@
     <Content Include="build\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="build\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="build\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="build\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\EI.pubxml" />
     <Content Include="src\fonts\fontawesome-webfont.eot" />
     <Content Include="src\fonts\fontawesome-webfont.ttf" />
@@ -592,6 +596,7 @@
     <Folder Include="build\resources\freeDownloads\" />
     <Folder Include="src\css\" />
     <Folder Include="src\gallery\events\470\" />
+    <Folder Include="src\gallery\models\" />
     <Folder Include="src\images\freeDownloads\" />
     <Folder Include="src\images\reports\" />
     <Folder Include="src\resources\freeDownloads\" />

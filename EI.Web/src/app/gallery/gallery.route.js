@@ -44,8 +44,8 @@
                      state: 'content.gallery.models',
                      config: {
                          url: '/models',
-                         templateUrl: 'app/other/comingsoon.html',
-                         controller: 'PostersController',
+                         templateUrl: 'app/gallery/models.html',
+                         controller: 'ModelsController',
                          controllerAs: 'vm',
                      }
                  },
