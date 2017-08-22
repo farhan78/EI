@@ -28,6 +28,7 @@ namespace EI.Data
         public IDbSet<LeafletCategory> LeafletCategorySet { get; set; }
         public IDbSet<FreeDownload> FreeDownloadSet { get; set; }
         public IDbSet<Quote> QuoteSet { get; set; }
+        public IDbSet<Model> ModelSet { get; set; }
         public IDbSet<Error> ErrorSet { get; set; }
         #endregion
 

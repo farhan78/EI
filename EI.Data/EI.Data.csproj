@@ -54,6 +54,7 @@
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
     <Compile Include="Configurations\EventConfiguration.cs" />
     <Compile Include="Configurations\FreeDownloadConfiguration.cs" />
+    <Compile Include="Configurations\ModelConfiguration.cs" />
     <Compile Include="Configurations\NewsConfiguration.cs" />
     <Compile Include="Configurations\PosterConfiguration.cs" />
     <Compile Include="Configurations\QuoteConfiguration.cs" />

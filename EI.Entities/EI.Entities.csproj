@@ -49,6 +49,7 @@
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoiceItem.cs" />
     <Compile Include="LeafletCategory.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Poster.cs" />
     <Compile Include="Product.cs" />
